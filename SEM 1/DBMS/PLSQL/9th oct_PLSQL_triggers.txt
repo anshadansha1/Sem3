@@ -1,0 +1,377 @@
+****************************************************************************************************************
+//TRIGGER
+
+****************************************************************************************************************
+
+SQL> create table emp_tab(eno varchar2(5) primary key,ename varchar2(20),esal number(10,2),job varchar2(20));
+
+Table created.
+
+SQL> desc emp_tab;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ENO                                       NOT NULL VARCHAR2(5)
+ ENAME                                              VARCHAR2(20)
+ ESAL                                               NUMBER(10,2)
+ JOB                                                VARCHAR2(20)
+
+SQL> create table emp_new(eno varchar2(5) primary key,ename varchar2(20),esal number(10,2),job varchar2(20));
+
+Table created.
+
+SQL> desc emp_new;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ENO                                       NOT NULL VARCHAR2(5)
+ ENAME                                              VARCHAR2(20)
+ ESAL                                               NUMBER(10,2)
+ JOB                                                VARCHAR2(20)
+
+SQL> create table emp_modified(eno varchar2(5) primary key,ename varchar2(20),esal number(10,2),job varchar2(20));
+
+Table created.
+
+SQL> desc emp_modified;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ENO                                       NOT NULL VARCHAR2(5)
+ ENAME                                              VARCHAR2(20)
+ ESAL                                               NUMBER(10,2)
+ JOB                                                VARCHAR2(20)
+
+SQL>
+
+
+SQL> create table emp_x(eno varchar2(5) primary key,ename varchar2(20),esal number(10,2),job varchar2(20));
+
+Table created.
+
+SQL> desc emp_x;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ENO                                       NOT NULL VARCHAR2(5)
+ ENAME                                              VARCHAR2(20)
+ ESAL                                               NUMBER(10,2)
+ JOB                                                VARCHAR2(20)
+
+****************************************************************************************************************
+//TRIGGER CODE:
+//TRIGGER-DELETE
+SQL>
+
+SQL> edit E:\plsql_ans\triggers_p1.sql
+
+[[
+
+
+CREATE OR REPLACE trigger trig1 BEFORE delete
+ON emp_tab 
+FOR EACH ROW
+
+BEGIN
+
+if deleting then insert into emp_x values(:old.eno,:old.ename,:old.esal,:old.job,sysdate);
+
+end if;
+
+END;
+
+
+]]
+
+//WHENEVER a DELETE query happens it TRIGGERS and take that to table emp_x:
+
+
+SQL> @ E:\plsql_ans\triggers_p1.sql
+ 12  /
+
+Trigger created.
+
+SQL> delete from emp_tab where eno='E1004';
+
+1 row deleted.
+
+SQL> select * from emp_tab;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1001 NIHAL MUHAMMAD            70000 DATA ANALYST
+E1002 MINU ROSE                120000 DEVELOPER
+E1003 MANOJ IBNAUGUSTIN         90000 DEVELOPER
+E1005 LEO                       60000 DEVELOPER
+
+SQL> select * from emp_x;
+
+ENO   ENAME                      ESAL JOB                  X_DATE
+----- -------------------- ---------- -------------------- ---------
+E1004 SIGMA M S                150000 PROJECT MANAGER      09-OCT-23
+
+SQL>
+****************************************************************************************************************
+//TRIGGER-DELETE,INSERT,UPDATE
+//[[YOU can also give "AFTER" instead of "BEFORE" in trigger syntax.Both will give same result but execution is different]]
+
+SQL> edit E:\plsql_ans\triggers_p1.sql
+
+
+[[
+
+CREATE OR REPLACE trigger trig1 BEFORE delete or insert or update
+ON emp_tab 
+FOR EACH ROW
+
+BEGIN
+
+if deleting then
+ insert into emp_x values(:old.eno,:old.ename,:old.esal,:old.job,sysdate);
+
+elsif inserting then
+ insert into emp_new values(:new.eno,:new.ename,:new.esal,:new.job);
+
+else
+ insert into emp_modified values(:old.eno,:old.ename,:old.esal,:old.job);
+
+end if;
+
+END;
+
+]]
+
+
+SQL> @ E:\plsql_ans\triggers_p1.sql
+ 19  /
+
+Trigger created.
+
+SQL> insert into emp_tab values('E1004','SIGMA M S',150000,'PROJECT MANAGER');
+
+1 row created.
+
+SQL> select * from emp_tab;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1001 NIHAL MUHAMMAD            70000 DATA ANALYST
+E1002 MINU ROSE                120000 DEVELOPER
+E1003 MANOJ IBNAUGUSTIN         90000 DEVELOPER
+E1005 LEO                       60000 DEVELOPER
+E1004 SIGMA M S                150000 PROJECT MANAGER
+
+SQL> select * from emp_new;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1004 SIGMA M S                150000 PROJECT MANAGER
+
+SQL> edit E:\plsql_ans\triggers_p1.sql
+
+SQL> update emp_tab set ename='ABHINAV M S' where eno='E1004';
+
+1 row updated.
+
+SQL> select * from emp_tab;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1001 NIHAL MUHAMMAD            70000 DATA ANALYST
+E1002 MINU ROSE                120000 DEVELOPER
+E1003 MANOJ IBNAUGUSTIN         90000 DEVELOPER
+E1005 LEO                       60000 DEVELOPER
+E1004 ABHINAV M S              150000 PROJECT MANAGER
+
+SQL> select * from emp_modified;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1004 SIGMA M S                150000 PROJECT MANAGER
+
+SQL>
+
+
+****************************************************************************************************************
+//TRIGGER-DELETE,INSERT,UPDATE
+//BY USING "WHEN" clause [ONLY of those who have job DEVELOPER's delete,insert,update gets recorded to new tables  ]
+
+SQL> edit E:\plsql_ans\triggers_p2.sql
+
+[[
+CREATE OR REPLACE trigger trig1 BEFORE delete or insert or update
+ON emp_tab 
+FOR EACH ROW
+WHEN(new.job='DEVELOPER' OR old.job='DEVELOPER')
+BEGIN
+
+if deleting then
+ insert into emp_x values(:old.eno,:old.ename,:old.esal,:old.job,sysdate);
+
+elsif inserting then
+ insert into emp_new values(:new.eno,:new.ename,:new.esal,:new.job);
+
+else
+ insert into emp_modified values(:old.eno,:old.ename,:old.esal,:old.job);
+
+end if;
+
+END;
+
+
+
+]]
+
+
+SQL> @ E:\plsql_ans\triggers_p2.sql
+ 19  /
+
+Trigger created.
+
+
+SQL> select * from emp_tab;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1001 NIHAL MUHAMMAD            70000 DATA ANALYST
+E1002 MINU ROSE                120000 DEVELOPER
+E1003 MANOJ IBNAUGUSTIN         90000 DEVELOPER
+E1005 LEO                       60000 DEVELOPER
+E1004 ABHINAV M S              150000 PROJECT MANAGER
+E1006 MANU SHANKAR             110000 DATA ANALYST
+
+6 rows selected.
+
+//INSERTING employee who is not DEVELOPER:
+
+SQL> insert into emp_tab values('E1007','HRISHIKESH',140000,'DATA ANALYST');
+
+1 row created.
+
+SQL> select * from emp_tab;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1001 NIHAL MUHAMMAD            70000 DATA ANALYST
+E1002 MINU ROSE                120000 DEVELOPER
+E1003 MANOJ IBNAUGUSTIN         90000 DEVELOPER
+E1005 LEO                       60000 DEVELOPER
+E1004 ABHINAV M S              150000 PROJECT MANAGER
+E1006 MANU SHANKAR             110000 DATA ANALYST
+E1007 HRISHIKESH               140000 DATA ANALYST
+
+7 rows selected.
+
+//NOT ADDED in new table:
+SQL> select * from emp_new;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1004 SIGMA M S                150000 PROJECT MANAGER
+E1006 MANU                     110000 DATA ANALYST
+
+SQL>
+
+//INSERTING employee who is a DEVELOPER:
+
+SQL> insert into emp_tab values('E1008','SREEKUMAR',135000,'DEVELOPER');
+
+1 row created.
+
+
+SQL> select * from emp_tab;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1001 NIHAL MUHAMMAD            70000 DATA ANALYST
+E1002 MINU ROSE                120000 DEVELOPER
+E1003 MANOJ IBNAUGUSTIN         90000 DEVELOPER
+E1008 SREEKUMAR                135000 DEVELOPER
+E1005 LEO                       60000 DEVELOPER
+E1004 ABHINAV M S              150000 PROJECT MANAGER
+E1006 MANU SHANKAR             110000 DATA ANALYST
+E1007 HRISHIKESH               140000 DATA ANALYST
+
+8 rows selected.
+
+SQL>
+//HERE IT IS  ADDED in new table:
+SQL> select * from emp_new;
+
+ENO   ENAME                      ESAL JOB
+----- -------------------- ---------- --------------------
+E1004 SIGMA M S                150000 PROJECT MANAGER
+E1006 MANU                     110000 DATA ANALYST
+E1008 SREEKUMAR                135000 DEVELOPER
+
+****************************************************************************************************************
+//STATEMENT TRIGGER - [FOR setting DAY AND TIME LIMIT AND ALL]
+
+
+//WHEN ['sat','sun','mon'] - current day : monday
+
+SQL> edit E:\plsql_ans\statement_trigger_p3.sql
+
+[[
+
+CREATE OR REPLACE trigger mytrig1 BEFORE delete or insert or update
+ON emp_tab 
+
+BEGIN
+
+if (TO_CHAR(SYSDATE,'day') IN ('sat','sun','mon')) OR  (TO_CHAR(SYSDATE,'hh:mi')NOT BETWEEN '08:30' AND '18:30') 
+THEN
+RAISE_APPLICATION_ERROR(-20500,'table is secured');
+
+end if;
+
+END;
+
+]]
+
+
+SQL> @ E:\plsql_ans\statement_trigger_p3.sql
+ 13  /
+
+Trigger created.
+
+SQL> insert into emp_tab values('E1009','nihu',135000,'DEVELOPER');
+insert into emp_tab values('E1009','nihu',135000,'DEVELOPER')
+            *
+ERROR at line 1:
+ORA-20500: table is secured
+ORA-06512: at "MCA.MYTRIG1", line 5
+ORA-04088: error during execution of trigger 'MCA.MYTRIG1'
+
+
+SQL>
+
+//WHEN ['sat','sun'] - current day : monday
+
+SQL> edit E:\plsql_ans\statement_trigger_p3.sql
+
+
+[[
+CREATE OR REPLACE trigger mytrig1 BEFORE delete or insert or update
+ON emp_tab 
+
+BEGIN
+
+if (TO_CHAR(SYSDATE,'day') IN ('sat','sun')) OR  (TO_CHAR(SYSDATE,'hh:mi') BETWEEN '08:30' AND '18:30') 
+THEN
+RAISE_APPLICATION_ERROR(-20500,'table is secured');
+
+end if;
+
+END;
+
+]]
+
+SQL> @ E:\plsql_ans\statement_trigger_p3.sql
+ 13  /
+
+Trigger created.
+
+SQL> insert into emp_tab values('E1009','nihu',135000,'DEVELOPER');
+
+1 row created.
+
+SQL> edit E:\plsql_ans\statement_trigger_p3.sql
+
+****************************************************************************************************************

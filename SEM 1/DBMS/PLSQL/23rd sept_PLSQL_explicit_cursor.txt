@@ -1,0 +1,125 @@
+***************************************************************************************************************
+//●	Write an explicit cursor to display the name,department, salary of the first 5 employees getting the highest salary.
+
+SQL> edit E:\plsql_ans\explicit_cur_highestsal.sql
+
+
+[[
+
+declare
+cursor empcur is 
+select empname,deptno,salary from employee order by salary desc; 
+
+ename employee.empname%type;
+deptno employee.deptno%type; 
+sal employee.salary%type;
+
+begin
+dbms_output.put_line('Highest 5 Employee details ');
+open empcur;
+fetch empcur into ename,deptno,sal;
+
+while empcur%found and empcur%rowcount<=5 
+loop
+
+dbms_output.put_line('Emp Name : '||ename);
+dbms_output.put_line('Dept No: '||deptno);
+dbms_output.put_line('Salary : '||sal);
+dbms_output.put_line('*************************');
+fetch empcur into ename,deptno,sal;
+
+end loop;
+
+close empcur;
+end;
+
+
+]]
+
+SQL> @ E:\plsql_ans\explicit_cur_highestsal.sql
+ 27  /
+
+PL/SQL procedure successfully completed.
+
+SQL> set serveroutput on;
+SQL> @ E:\plsql_ans\explicit_cur_highestsal.sql
+ 27  /
+Highest 5 Employee details
+Emp Name : ARNOLD LEONARD AMON
+Dept No: A00
+Salary : 152750
+*************************
+Emp Name : DONA ANICE SIBY
+Dept No: A00
+Salary : 46500
+*************************
+Emp Name : PHILIP VINCENT
+Dept No: B01
+Salary : 41250
+*************************
+Emp Name : ALFRIN LUIZ
+Dept No: E01
+Salary : 40175
+*************************
+Emp Name : SHILVY K K
+Dept No: C01
+Salary : 38250
+*************************
+
+PL/SQL procedure successfully completed.
+
+
+***************************************************************************************************************
+
+//●	The HRD manager decides to raise the salary of employees working as ‘analyst’ by 0.15. Whenever any such raise is given to the employees, a record for the same is maintained in the emp_raise table. It includes the employee number, the date when the raise was given and actual raise. Write a PL/SQL block to update the salary of the employees and insert a record in the emp_raise table.
+Emp_raise(empcode, raisedate,raise_amt)
+
+
+SQL> edit E:\plsql_ans\explicit_cur_analystraise2.sql
+
+
+[[
+
+declare
+cursor c_analyst is
+select empno,salary from employee where job='ANALYST';
+
+v_empno employee.empno%type;
+v_sal employee.salary%type;
+v_raise number;
+
+begin
+
+open c_analyst;
+
+fetch c_analyst into v_empno,v_sal;
+
+while c_analyst%found 
+loop
+
+v_raise:=v_sal*0.15;
+
+update employee set salary=salary+v_raise where empno=v_empno;
+
+insert into emp_raise values(v_empno,SYSDATE,V_raise);
+fetch c_analyst into v_empno,v_sal;
+end loop;
+
+
+close c_analyst;
+
+end;
+]]
+SQL> @ E:\plsql_ans\explicit_cur_analystraise2.sql
+ 29  /
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from emp_raise;
+
+EMPCODE    RAISEDATE  RAISE_AMT
+---------- --------- ----------
+E0130      23-SEP-23       3570
+E0140      23-SEP-23       4263
+
+

@@ -1,0 +1,301 @@
+PL/SQL
+***************************************************************************
+
+SQL> edit E:\Muhammad Anshad\SQL\PLSQL\p1.sql
+
+SQL> declare
+  2  begin
+  3  dbms_output.put_line('Hello world');
+  4  end;
+  5
+  6
+  7
+  8  /
+
+PL/SQL procedure successfully completed.
+
+SQL> set serveroutput on ;
+SQL> declare
+  2  begin
+  3  dbms_output.put_line('Hello world');
+  4  end;
+  5  /
+Hello world
+
+PL/SQL procedure successfully completed.
+***************************************************************************
+//RUNNING PLSQL FROM A FILE(using @):
+
+SQL> @ E:\Muhammad Anshad\SQL\PLSQL\p1.sql
+SP2-0310: unable to open file "E:\Muhammad.sql" [THIS HAPPENS BECAUSE ,THERE IS SIZE LIMIT FOR THE ADDRESS]
+
+//SO COPYING file to E:\p1.sql
+
+SQL> @ E:\p1.sql
+  5  /
+Hello world
+
+PL/SQL procedure successfully completed.
+
+SQL> @ E:\p1.sql
+  5  /
+Hello world
+
+PL/SQL procedure successfully completed.
+
+SQL> @ E:\plsql_ans\p1.sql
+  5  /
+Hello world
+
+PL/SQL procedure successfully completed.
+
+SQL>
+****************************************************************************
+//P2_sum and display:
+
+SQL> edit E:\p2_sum_disp.sql
+
+//PL/SQL code :
+[[
+declare
+num1 number;
+num2 number;
+s number;
+begin
+num1:=21;
+num2:=45;
+s:=num1+num2;
+dbms_output.put_line('sum is :'||s);
+end;
+]]
+
+SQL> @ E:\p2_sum_disp.sql
+ 11  /
+sum is :66
+
+PL/SQL procedure successfully completed.
+
+SQL> edit E:\p2_sum_disp.sql
+****************************************************************************
+//p3_sum by taking values from user
+
+SQL> edit E:\plsql_ans\p3_sum_value_frm_user.sql
+
+//PL/SQL code :
+
+[[
+declare
+num1 number;
+num2 number;
+s number;
+begin
+num1:=&num1;
+num2:=&num2;
+s:=num1+num2;
+dbms_output.put_line('sum is :'||s);
+end;
+]]
+
+SQL> @ E:\plsql_ans\p3_sum_value_frm_user.sql
+ 11  /
+Enter value for num1: 20
+old   6: num1:=&num1;
+new   6: num1:=20;
+Enter value for num2: 30
+old   7: num2:=&num2;
+new   7: num2:=30;
+sum is :50
+
+PL/SQL procedure successfully completed.
+
+SQL>
+****************************************************************************
+//p4_ODD_EVEN
+SQL> edit E:\plsql_ans\p4_even_odd.sql
+
+//PL/SQL code :
+[[
+declare
+num1 number;
+res number;
+
+begin
+num1:=&num1;
+res:=MOD(num1,2);
+
+if res=0 then 
+dbms_output.put_line('Entered number is EVEN');
+else
+dbms_output.put_line('Entered number is ODD');
+end if;
+
+end;
+]]
+
+SQL> @ E:\plsql_ans\p4_even_odd.sql
+ 16  /
+Enter value for num1: 5
+old   6: num1:=&num1;
+new   6: num1:=5;
+Entered number is ODD
+
+PL/SQL procedure successfully completed.
+
+SQL> @ E:\plsql_ans\p4_even_odd.sql
+ 16  /
+Enter value for num1: 8
+old   6: num1:=&num1;
+new   6: num1:=8;
+Entered number is EVEN
+
+PL/SQL procedure successfully completed.
+****************************************************************************
+//p5_factorial
+
+SQL> edit E:\plsql_ans\p5_factorial.sql
+
+[[
+declare
+n number;
+fact number;
+
+begin
+fact:=1;
+n:=&n;
+
+
+while n>0
+loop
+fact:=fact*n;
+n:=n-1;
+end loop; 
+
+dbms_output.put_line('Factorial is : ' ||  fact);
+
+end;
+]]
+SQL> @ E:\plsql_ans\p5_factorial.sql
+ 19  /
+Enter value for n: 5
+old   7: n:=&n;
+new   7: n:=5;
+Factorial is : 120
+
+PL/SQL procedure successfully completed.
+
+****************************************************************************
+//P5_2_factorial using FOR LOOP
+
+SQL> edit E:\plsql_ans\p5_2_factorial_for_loop.sql
+
+[[
+declare
+n number;
+fact number;
+i number;
+
+begin
+fact:=1;
+n:=&n;
+
+
+for i in 1 .. n
+loop
+fact:=fact*i;
+end loop; 
+
+dbms_output.put_line('Factorial is : ' ||  fact);
+
+end;
+]]
+
+SQL> @ E:\plsql_ans\p5_2_factorial_for_loop.sql
+ 19  /
+Enter value for n: 5
+old   8: n:=&n;
+new   8: n:=5;
+Factorial is : 120
+
+PL/SQL procedure successfully completed.
+****************************************************************************
+//P5_3_factorial using  LOOP...EXIT WHEN LOOP
+
+SQL> edit E:\plsql_ans\p5_3_factorial_EXIT_WHEN_loop.sql
+
+[[
+declare
+n number;
+fact number;
+
+
+begin
+fact:=1;
+n:=&n;
+
+
+
+loop
+fact:=fact*n;
+n:=n-1;
+exit when n<=0; 
+end loop; 
+
+dbms_output.put_line('Factorial is : ' ||  fact);
+
+end;
+]]
+SQL> @ E:\plsql_ans\p5_3_factorial_EXIT_WHEN_loop.sql
+ 21  /
+Enter value for n: 5
+old   8: n:=&n;
+new   8: n:=5;
+Factorial is : 120
+
+PL/SQL procedure successfully completed.
+****************************************************************************
+//P6_circle
+//Write a PL/SQL code block  to calculate the area of a circle for a value of radius varying from 3 to 7. Store the radius and corresponding values of calculated area in an empty table named Areas, consisting of two columns Radius and Area.
+
+
+SQL> create table circle(radius number(5,2),area number(10,2));
+
+Table created.
+
+SQL> edit E:\plsql_ans\p6_area_of_circle.sql
+
+//PL/SQL
+[[
+declare
+i number;
+a number;
+
+begin
+i:=3;
+while i<=7
+loop
+a:=3.14*i*i;
+insert into circle values(i,a);
+i:=i+1;
+end loop;
+
+end;
+
+]]
+
+SQL> @ E:\plsql_ans\p6_area_of_circle.sql
+ 16  /
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from circle;
+
+    RADIUS       AREA
+---------- ----------
+         3      28.26
+         4      50.24
+         5       78.5
+         6     113.04
+         7     153.86
+
+SQL>
+****************************************************************************

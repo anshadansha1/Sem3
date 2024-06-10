@@ -1,0 +1,296 @@
+
+
+SQL> create table supplier(sp_id varchar2(5) primary key,sp_name varchar2(25),sp_city varchar2(30),sp_revenue int,constraint spid_chk check(sp_id like('S%')),constraint revn_chk check(sp_revenue > 5000));
+
+Table created.
+
+SQL> desc supplier;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SP_ID                                     NOT NULL VARCHAR2(5)
+ SP_NAME                                            VARCHAR2(25)
+ SP_CITY                                            VARCHAR2(30)
+ SP_REVENUE                                         NUMBER(38)
+
+SQL> create table parts(parts_id varchar2(5) primary key,parts_name varchar2(30),parts_color varchar2(20),parts_stock int,constraint pid_chk check(parts_id like('P%') ));
+
+Table created.
+
+SQL> desc parts;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PARTS_ID                                  NOT NULL VARCHAR2(5)
+ PARTS_NAME                                         VARCHAR2(30)
+ PARTS_COLOR                                        VARCHAR2(20)
+ PARTS_STOCK                                        NUMBER(38)
+
+SQL> create table shipment(ship_date date primary key,sp_id varchar2(5) primary key,parts_id varchar2(5) primary key,parts_qty int);
+create table shipment(ship_date date primary key,sp_id varchar2(5) primary key,parts_id varchar2(5) primary key,parts_qty int)
+                                                                   *
+ERROR at line 1:
+ORA-02260: table can have only one primary key
+
+
+SQL> create table shipment(ship_date date,sp_id varchar2(5),parts_id varchar2(5),parts_qty int,primary key(ship_date,sp_id,parts_id));
+
+Table created.
+
+SQL> desc shipment;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SHIP_DATE                                 NOT NULL DATE
+ SP_ID                                     NOT NULL VARCHAR2(5)
+ PARTS_ID                                  NOT NULL VARCHAR2(5)
+ PARTS_QTY                                          NUMBER(38)
+
+SQL>
+
+
+SQL> insert into supplier values('S100','Smith Jones','Mumbai',10000);
+
+1 row created.
+
+SQL> insert into supplier values('S101','Rajeev Kumar','Bangalore',20000);
+
+1 row created.
+
+SQL> insert into supplier values('S102','Manoj M','Kochi',15000);
+
+1 row created.
+
+SQL> insert into supplier values('S103','Meera Rao','Mumbai',25000);
+
+1 row created.
+
+SQL> select * from supplier;
+
+SP_ID SP_NAME                   SP_CITY                        SP_REVENUE
+----- ------------------------- ------------------------------ ----------
+S100  Smith Jones               Mumbai                              10000
+S101  Rajeev Kumar              Bangalore                           20000
+S102  Manoj M                   Kochi                               15000
+S103  Meera Rao                 Mumbai                              25000
+
+SQL> insert into parts values('P100','Nut','Red',200);
+
+1 row created.
+
+SQL> insert into parts values('P101','Bolt','Green',175);
+
+1 row created.
+
+SQL> insert into parts values('P102','Screw','Red',200);
+
+1 row created.
+
+SQL> insert into parts values('P103','Cam','Blue',145);
+
+1 row created.
+
+SQL> select * from parts;
+
+PARTS PARTS_NAME                     PARTS_COLOR          PARTS_STOCK
+----- ------------------------------ -------------------- -----------
+P100  Nut                            Red                          200
+P101  Bolt                           Green                        175
+P102  Screw                          Red                          200
+P103  Cam                            Blue                         145
+
+SQL> insert into shipment values('12-aug-2020','S100','P100',25);
+
+1 row created.
+
+SQL> insert into shipment values('16-aug-2020','S101','P100',30);
+
+1 row created.
+
+SQL> insert into shipment values('25-sep-2020','S100','P101',25);
+
+1 row created.
+
+SQL> insert into shipment values('16-may-2020','S100','P103',40);
+
+1 row created.
+
+SQL> insert into shipment values('14-aug-2020','S102','P100',45);
+
+1 row created.
+
+SQL> select * from shipment;
+
+SHIP_DATE SP_ID PARTS  PARTS_QTY
+--------- ----- ----- ----------
+12-AUG-20 S100  P100          25
+16-AUG-20 S101  P100          30
+25-SEP-20 S100  P101          25
+16-MAY-20 S100  P103          40
+14-AUG-20 S102  P100          45
+
+SQL>
+
+
+
+
+1.
+
+SQL> select sp_name from supplier where sp_city like ('M%') and sp_revenue >=1000;
+
+SP_NAME
+-------------------------
+Smith Jones
+Meera Rao
+
+SQL>
+
+2.
+
+SQL> select parts_name from parts p join shipment s on p.parts_id=s.parts_id where to_char(ship_date,'mon')='aug';
+
+PARTS_NAME
+------------------------------
+Nut
+Nut
+Nut
+
+
+3.
+
+SQL> select sp_name from supplier su join shipment sh on su.sp_id=sh.sp_id join parts p on sh.parts_id=p.parts_id where parts_color='Red';
+
+SP_NAME
+-------------------------
+Smith Jones
+Rajeev Kumar
+Manoj M
+
+SQL>
+
+4.
+
+SQL> select avg(parts_qty) from shipment group by sp_id;
+
+AVG(PARTS_QTY)
+--------------
+            45
+            30
+            30
+
+SQL> select sp_name,avg(parts_qty) from shipment sh join supplier su on sh.sp_id=su.sp_id group by su.sp_name;
+
+SP_NAME                   AVG(PARTS_QTY)
+------------------------- --------------
+Smith Jones                           30
+Manoj M                               45
+Rajeev Kumar                          30
+
+SQL>
+
+SQL> select parts_name,avg(parts_qty) from shipment sh join supplier su on sh.sp_id=su.sp_id join parts p on p.parts_id=sh.parts_id group by parts_name,su.sp_id;
+
+PARTS_NAME                     AVG(PARTS_QTY)
+------------------------------ --------------
+Cam                                        40
+Nut                                        25
+Nut                                        30
+Bolt                                       25
+Nut                                        45
+
+SQL>
+
+SQL> select parts_name,sp_name,avg(parts_qty) from shipment sh join supplier su on sh.sp_id=su.sp_id join parts p on p.parts_id=sh.parts_id group by parts_name,sp_name;
+
+PARTS_NAME                     SP_NAME                   AVG(PARTS_QTY)
+------------------------------ ------------------------- --------------
+Nut                            Manoj M                               45
+Bolt                           Smith Jones                           25
+Nut                            Smith Jones                           25
+Nut                            Rajeev Kumar                          30
+Cam                            Smith Jones                           40
+
+5.
+
+
+SQL> select parts_name from parts p join shipment sh on p.parts_id=sh.parts_id join supplier su on sh.sp_id=su.sp_id where sp_revenue > (select avg(sp_revenue) from supplier);
+
+PARTS_NAME
+------------------------------
+Nut
+
+SQL>
+
+
+##################################################################################################################################################################################
+
+
+SQL> edit E:\plsql\set2_trigger.sql
+
+[[[
+CREATE OR REPLACE TRIGGER ship_check
+BEFORE
+insert 
+on shipment
+for each row
+
+DECLARE
+	stock number(5,2);
+BEGIN
+	select parts_stock INTO stock from parts where parts_id=:new.parts_id; 
+	
+	IF inserting
+	THEN 
+	stock:=stock+:new.parts_qty;
+		IF stock > 500
+		THEN 
+		RAISE_APPLICATION_ERROR(-20500,'STOCK LIMIT EXCEEDED!');
+		
+		ELSE
+		update parts set parts_stock=stock where parts_id=:new.parts_id;
+		END IF;
+	END IF;
+END;
+]]]
+
+
+
+SQL> select * from parts;
+
+PARTS PARTS_NAME                     PARTS_COLOR          PARTS_STOCK
+----- ------------------------------ -------------------- -----------
+P100  Nut                            Red                          200
+P101  Bolt                           Green                        175
+P102  Screw                          Red                          200
+P103  Cam                            Blue                         145
+
+SQL> select * from shipment;
+
+SHIP_DATE SP_ID PARTS  PARTS_QTY
+--------- ----- ----- ----------
+12-AUG-20 S100  P100          25
+16-AUG-20 S101  P100          30
+25-SEP-20 S100  P101          25
+16-MAY-20 S100  P103          40
+14-AUG-20 S102  P100          45
+
+SQL> insert into shipment values('20-aug-2020','S100','P100',400);
+insert into shipment values('20-aug-2020','S100','P100',400)
+            *
+ERROR at line 1:
+ORA-20500: STOCK LIMIT EXCEEDED!
+ORA-06512: at "SYSTEM.SHIP_CHECK", line 11
+ORA-04088: error during execution of trigger 'SYSTEM.SHIP_CHECK'
+
+
+SQL> insert into shipment values('20-aug-2020','S100','P100',50);
+
+1 row created.
+
+SQL> select * from parts;
+
+PARTS PARTS_NAME                     PARTS_COLOR          PARTS_STOCK
+----- ------------------------------ -------------------- -----------
+P100  Nut                            Red                          250
+P101  Bolt                           Green                        175
+P102  Screw                          Red                          200
+P103  Cam                            Blue                         145
+
+SQL>

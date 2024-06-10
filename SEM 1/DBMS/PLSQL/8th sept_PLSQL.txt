@@ -1,0 +1,196 @@
+****************************************************************************
+//p7_account
+//Write a PL/SQL code block that will accept an account number from the user and debit an amount of Rs.2000 from the account if the account has a minimum  balance of 500 after the amount is debited. The process is fired on the Accounts table.
+
+
+SQL> create table account(ac_no number(15) primary key,ac_name varchar(30),ac_balance number(10,2));
+
+Table created.
+
+SQL> insert into account values(1001,'Nihal Muhammed',25000);
+
+1 row created.
+
+SQL> insert into account values(1004,'Majo augestine',39000);
+
+1 row created.
+
+SQL> insert into account values(1007,'Abhinav M S',59000);
+
+1 row created.
+
+SQL> insert into account values(1008,'sreekumar',45000);
+
+1 row created.
+
+SQL> insert into account values(1009,'Hari',1000);
+
+1 row created.
+
+SQL> select * from account;
+
+     AC_NO AC_NAME                        AC_BALANCE
+---------- ------------------------------ ----------
+      1001 Nihal Muhammed                      25000
+      1004 Majo augestine                      39000
+      1007 Abhinav M S                         59000
+      1008 sreekumar                           45000
+      1009 Hari                                 1000
+
+SQL> edit E:\plsql_ans\p7_account.sql
+
+SQL> @ E:\plsql_ans\p7_account.sql
+ 20  /
+Enter value for acno: 1009
+old   6: acno:=&acno;
+new   6: acno:=1009;
+Transation not possible,Insufficient balance
+
+PL/SQL procedure successfully completed.
+
+[[
+declare
+acno number(15);
+bal number(10,2);
+
+begin
+acno:=&acno;
+
+select ac_balance into bal
+from account where 
+ac_no=acno;
+
+if bal-2000<500 then
+dbms_output.put_line('Transation not possible,Insufficient balance');
+else
+update account set ac_balance=ac_balance-2000 where ac_no=acno;
+dbms_output.put_line('Transaction Successfully completed');
+end if;
+
+end;
+
+]]
+
+SQL> @ E:\plsql_ans\p7_account.sql
+ 20  /
+Enter value for acno: 1001
+old   6: acno:=&acno;
+new   6: acno:=1001;
+Transaction Successfully completed
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from account;
+
+     AC_NO AC_NAME                        AC_BALANCE
+---------- ------------------------------ ----------
+      1001 Nihal Muhammed                      23000
+      1004 Majo augestine                      39000
+      1007 Abhinav M S                         59000
+      1008 sreekumar                           45000
+      1009 Hari                                 1000
+
+SQL>
+
+****************************************************************************
+//p8_students_mark
+//For student with total mark of 45-50 give extra 5 marks as moderation.(from 3 marks column)
+
+SQL> create table student_mark(s_no number(4) primary key,s_name varchar(30),mark1 number(3),mark2 number(3),mark3 number(3));
+
+Table created.
+
+SQL> insert into student_mark values(5001,'Al nihal',22,23,20);
+
+1 row created.
+
+SQL> insert into student_mark values(5002,'Majo mon',20,13,12);
+
+1 row created.
+
+SQL> insert into student_mark values(5003,'Minu rose',20,10,10);
+
+1 row created.
+
+SQL> insert into student_mark values(5004,'Leo',10,20,16);
+
+1 row created.
+
+SQL> select * from student_mark;
+
+      S_NO S_NAME                              MARK1      MARK2      MARK3
+---------- ------------------------------ ---------- ---------- ----------
+      5001 Al nihal                               22         23         20
+      5002 Majo mon                               20         13         12
+      5003 Minu rose                              20         10         10
+      5004 Leo                                    10         20         16
+
+SQL> edit E:\plsql_ans\p8_student_mark.sql
+
+
+[[
+
+declare
+stno number(4);
+sum_s number(3);
+begin
+stno:=&stno;
+
+select mark1+mark2+mark3 into sum_s from student_mark where s_no=stno;
+
+if sum_s>=50 then
+dbms_output.put_line('No moderation Required');
+
+elsif sum_s>=45 and sum_s<50 then
+update student_mark set mark1=mark1+5 where s_no=stno;
+dbms_output.put_line('Moderation Applied');
+
+else
+dbms_output.put_line('Moderation not Applicable');
+end if;
+
+end;
+
+]]
+
+QL> edit E:\plsql_ans\p8_student_mark.sql
+
+SQL> @ E:\plsql_ans\p8_student_mark.sql
+ 21  /
+Enter value for stno: 5001
+old   5: stno:=&stno;
+new   5: stno:=5001;
+No moderation Required
+
+PL/SQL procedure successfully completed.
+
+SQL> @ E:\plsql_ans\p8_student_mark.sql
+ 21  /
+Enter value for stno: 5002
+old   5: stno:=&stno;
+new   5: stno:=5002;
+Moderation Applied
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from student_mark;
+
+      S_NO S_NAME                              MARK1      MARK2      MARK3
+---------- ------------------------------ ---------- ---------- ----------
+      5001 Al nihal                               22         23         20
+      5002 Majo mon                               25         13         12
+      5003 Minu rose                              20         10         10
+      5004 Leo                                    10         20         16
+
+SQL> @ E:\plsql_ans\p8_student_mark.sql
+ 21  /
+Enter value for stno: 5003
+old   5: stno:=&stno;
+new   5: stno:=5003;
+Moderation not Applicable
+
+PL/SQL procedure successfully completed.
+
+**************************************************************************************
+//Write a PL/SQL block of code that updates the salaries of Maria Jacob and Albert by Rs. 2000/- and Rs.2500/- respectively. Then check to see that the total salary does not exceed 75000. If the total salary is greater than 75000, then undo the updates made to salaries of both. (Use savepoint, rollback and commit).
+

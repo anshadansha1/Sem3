@@ -1,0 +1,14 @@
+E:\MCA\SEM 3\.NET framework\sampleproject2\bin\Debug\net8.0\sampleproject2.exe
+E:\MCA\SEM 3\.NET framework\sampleproject2\bin\Debug\net8.0\sampleproject2.deps.json
+E:\MCA\SEM 3\.NET framework\sampleproject2\bin\Debug\net8.0\sampleproject2.runtimeconfig.json
+E:\MCA\SEM 3\.NET framework\sampleproject2\bin\Debug\net8.0\sampleproject2.dll
+E:\MCA\SEM 3\.NET framework\sampleproject2\bin\Debug\net8.0\sampleproject2.pdb
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.AssemblyInfoInputs.cache
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.AssemblyInfo.cs
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.csproj.CoreCompileInputs.cache
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.dll
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\refint\sampleproject2.dll
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.pdb
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\sampleproject2.genruntimeconfig.cache
+E:\MCA\SEM 3\.NET framework\sampleproject2\obj\Debug\net8.0\ref\sampleproject2.dll

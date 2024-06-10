@@ -1,0 +1,299 @@
+//PROCEDURES
+
+*******************************************************************************************************
+SQL> edit E:\plsql_ans\procedures.sql
+
+SQL> @ E:\plsql_ans\procedures.sql
+ 10  /
+
+Warning: Procedure created with compilation errors.
+
+SQL> show errors
+Errors for PROCEDURE SUM1:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/1      PLS-00103: Encountered the symbol "S" when expecting one of the
+         following:
+         ; is with authid as cluster order using external
+         deterministic parallel_enable pipelined result_cache
+         The symbol "is" was substituted for "S" to continue.
+
+SQL>
+
+SQL> edit E:\plsql_ans\procedures.sql
+
+SQL> @ E:\plsql_ans\procedures.sql
+ 10  /
+
+Warning: Procedure created with compilation errors.
+
+SQL> show errors
+Errors for PROCEDURE SUM1:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+3/1      PLS-00103: Encountered the symbol "S"
+SQL>
+
+SQL> edit E:\plsql_ans\procedures.sql
+
+[[
+create or replace procedure sum1(a IN number,b IN number)
+AS
+s number(5,2);
+
+begin
+s:=a+b;
+dbms_output.put_line('sum is :'||s);
+
+end;
+]]
+
+SQL> @ E:\plsql_ans\procedures.sql
+ 10  /
+
+Procedure created.
+
+SQL>
+
+*******************************************************************************************************
+//TWO WAYS TO EXECUTE THESE PROCEDURES:
+*******************************************************************************************************
+//1.By using 'execute' command:
+
+SQL> execute sum1(6,7);
+sum is :13
+
+PL/SQL procedure successfully completed.
+
+SQL>
+*******************************************************************************************************
+//CREATED PROCEDURE('sum1') is called :
+[HERE 'sum1' is the procedure we created in previous program,Which is now in the database. ]
+
+
+SQL> edit E:\plsql_ans\procedures_p2.sql
+
+
+[[
+declare
+n1 number;
+n2 number;
+begin
+n1:=&n1;
+n2:=&n2;
+sum1(n1,n2); 
+end;
+
+]]
+
+
+SQL> @ E:\plsql_ans\procedures_p2.sql
+  9  /
+Enter value for n1: 50
+old   5: n1:=&n1;
+new   5: n1:=50;
+Enter value for n2: 30
+old   6: n2:=&n2;
+new   6: n2:=30;
+sum is :80
+
+PL/SQL procedure successfully completed.
+
+SQL>
+*******************************************************************************************************
+// PROCEDURE USING : IN and OUT
+
+SQL> edit E:\plsql_ans\procedures_p3.sql
+
+[[
+create or replace procedure sum1(a IN number,b IN number,c OUT number)
+AS
+
+begin
+c:=a+b;
+end;
+]]
+
+SQL> @ E:\plsql_ans\procedures_p3.sql
+  7  /
+
+Procedure created.
+
+SQL> edit E:\plsql_ans\procedures_p4.sql
+
+[[
+
+declare
+x number(5,2);
+y number(5,2);
+z number(5,2);
+begin
+x:=&x;
+y:=&y;
+sum1(x,y,z);
+dbms_output.put_line('sum is :'||z);
+
+end;
+]]
+
+SQL> @ E:\plsql_ans\procedures_p4.sql
+ 12  /
+Enter value for x: 20
+old   6: x:=&x;
+new   6: x:=20;
+Enter value for y: 40
+old   7: y:=&y;
+new   7: y:=40;
+sum is :60
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+*******************************************************************************************************
+//// PROCEDURE USING : IN and IN OUT
+
+SQL> edit E:\plsql_ans\procedures_p5.sql
+
+
+[[
+create or replace procedure sum1(a IN number,b IN OUT number)
+AS
+
+begin
+b:=a+b;
+end;
+]]
+
+
+SQL> @ E:\plsql_ans\procedures_p5.sql
+  7  /
+
+Procedure created.
+
+SQL> edit E:\plsql_ans\procedures_p6.sql
+
+
+[[
+declare
+x number(5,2);
+y number(5,2);
+begin
+x:=&x;
+y:=&y;
+sum1(x,y);
+dbms_output.put_line('sum is :'||y);
+
+end;
+]]
+
+
+SQL> @ E:\plsql_ans\procedures_p6.sql
+ 11  /
+Enter value for x: 10
+old   5: x:=&x;
+new   5: x:=10;
+Enter value for y: 20
+old   6: y:=&y;
+new   6: y:=20;
+sum is :30
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+*******************************************************************************************************
+//USING EMPLOYEE TABLE
+
+SQL> edit E:\plsql_ans\procedures_p7.sql
+
+
+[[
+create or replace procedure empproc(empn IN char)
+AS
+ename employee.empname%type;
+depno employee.deptno%type;
+
+begin
+
+select empname,deptno into ename,depno from employee where  empno=empn;
+dbms_output.put_line('Name : '||ename); 
+dbms_output.put_line('Deptno : '||depno);
+dbms_output.put_line('******************');
+
+end;
+]]
+
+SQL> @ E:\plsql_ans\procedures_p7.sql
+ 14  /
+
+Procedure created.
+
+SQL> execute empproc('E0120');
+Name : JUNAID K V
+Deptno : A00
+******************
+
+PL/SQL procedure successfully completed.
+
+SQL>
+*******************************************************************************************************
+//FUNCTION
+*******************************************************************************************************
+//FUNCTION : the difference with procedure and function is that function have a return value. 
+
+SQL> edit E:\plsql_ans\function_1.sql
+
+
+[[
+create or replace function sum_fn(a IN number,b IN number)
+return number
+as
+c number(5,2);
+begin
+c:=a+b;
+return c;
+end;
+]]
+
+
+SQL> @ E:\plsql_ans\function_1.sql
+  9  /
+
+Function created.
+
+SQL> edit E:\plsql_ans\function_2.sql
+
+[[
+declare
+x number(5,2);
+y number(5,2);
+z number(5,2);
+begin
+x:=&x;
+y:=&y;
+z:=sum_fn(x,y);
+dbms_output.put_line('sum is :'||z);
+
+end;
+]]
+
+
+
+SQL> @ E:\plsql_ans\function_2.sql
+ 12  /
+Enter value for x: 10
+old   6: x:=&x;
+new   6: x:=10;
+Enter value for y: 20
+old   7: y:=&y;
+new   7: y:=20;
+sum is :30
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+*******************************************************************************************************

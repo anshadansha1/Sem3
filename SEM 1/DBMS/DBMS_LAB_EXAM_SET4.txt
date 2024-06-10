@@ -1,0 +1,162 @@
+SQL> create table department(dept_id varchar2(5) primary key,name varchar2(25),location varchar2(30),constraint did_chk check(dept_id like('D%')));
+
+Table created.
+
+SQL> desc department;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ DEPT_ID                                               NOT NULL VARCHAR2(5)
+ NAME                                                           VARCHAR2(25)
+ LOCATION                                                       VARCHAR2(30)
+
+SQL> create table project(proj_id varchar2(5) primary key,project_name varchar2(30),dept_id references department(dept_id));
+
+Table created.
+
+SQL> desc project;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ PROJ_ID                                               NOT NULL VARCHAR2(5)
+ PROJECT_NAME                                                   VARCHAR2(30)
+ DEPT_ID                                                        VARCHAR2(5)
+
+
+SQL> create table employee(emp_id varchar2(5) primary key,emp_name varchar2(5),dept_id varchar2(5) references department(dept_id),job varchar2(20),hire_date date,gender varchar2(2),dob date,salary int,proj_id references project(proj_id),constraint eid_chk check(emp_id like('E%')));
+
+Table created.
+
+SQL> desc employee;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ EMP_ID                                                NOT NULL VARCHAR2(5)
+ EMP_NAME                                                       VARCHAR2(5)
+ DEPT_ID                                                        VARCHAR2(5)
+ JOB                                                            VARCHAR2(20)
+ HIRE_DATE                                                      DATE
+ GENDER                                                         VARCHAR2(2)
+ DOB                                                            DATE
+ SALARY                                                         NUMBER(38)
+ PROJ_ID                                                        VARCHAR2(5)
+
+
+
+SQL> insert into department values('D101','Marketing','Kochi');
+
+1 row created.
+
+SQL> insert into department values('D102','Sales','Bangalore');
+
+1 row created.
+
+SQL> insert into department values('D103','Finance','Hyderabad');
+
+1 row created.
+
+SQL> select * from department;
+
+DEPT_ NAME                      LOCATION
+----- ------------------------- ------------------------------
+D101  Marketing                 Kochi
+D102  Sales                     Bangalore
+D103  Finance                   Hyderabad
+
+SQL>
+
+
+
+
+SQL> insert into department values('D101','Marketing','Kochi');
+
+1 row created.
+
+SQL> insert into department values('D102','Sales','Bangalore');
+
+1 row created.
+
+SQL> insert into department values('D103','Finance','Hyderabad');
+
+1 row created.
+
+SQL> select * from department;
+
+DEPT_ NAME                      LOCATION
+----- ------------------------- ------------------------------
+D101  Marketing                 Kochi
+D102  Sales                     Bangalore
+D103  Finance                   Hyderabad
+
+SQL> insert into project values('P101','Website Development','D101');
+
+1 row created.
+
+SQL> insert into project values('P102','CRM Implementation','D102');
+
+1 row created.
+
+SQL> insert into project values('P103','Financial Audit','D103');
+
+1 row created.
+
+SQL> select * from project;
+
+PROJ_ PROJECT_NAME                   DEPT_
+----- ------------------------------ -----
+P101  Website Development            D101
+P102  CRM Implementation             D102
+P103  Financial Audit                D103
+
+SQL> insert into employee values('E101','John Doe','D101','Web developer','01-jan-2023','M','01-jan-1990',50000,'P101');
+insert into employee values('E101','John Doe','D101','Web developer','01-jan-2023','M','01-jan-1990',50000,'P101')
+                                   *
+ERROR at line 1:
+ORA-12899: value too large for column "SYSTEM"."EMPLOYEE"."EMP_NAME" (actual: 8, maximum: 5)
+
+
+SQL> alter table employee modify emp_name varchar2(25);
+
+Table altered.
+
+SQL> insert into employee values('E101','John Doe','D101','Web developer','01-jan-2023','M','01-jan-1990',50000,'P101');
+
+1 row created.
+
+SQL> insert into employee values('E102','Jane Smith','D102','Account Manager','15-may-2023','F','12-mar-1992',45000,'P102');
+
+1 row created.
+
+SQL> insert into employee values('E103','Peter Jones','D103','Financial Analyst','19-sep-2023','M','25-jul-1998',60000,'P103');
+
+1 row created.
+
+SQL> select * from employee;
+
+EMP_I EMP_NAME                  DEPT_ JOB                  HIRE_DATE GE DOB
+              SALARY PROJ_
+----- ------------------------- ----- -------------------- --------- -- --------- ---------- -----
+E101  John Doe                  D101  Web developer        01-JAN-23 M  01-JAN-90      50000 P101
+E102  Jane Smith                D102  Account Manager      15-MAY-23 F  12-MAR-92      45000 P102
+E103  Peter Jones               D103  Financial Analyst    19-SEP-23 M  25-JUL-98      60000 P103
+
+SQL>                                                                          
+
+
+
+[[[
+
+1.
+SQL> alter table employee add adress varchar2(50);
+
+Table altered.
+
+2.
+
+
+SQL> update employee set salary=salary+1000 where dept_id='D101';
+
+1 row updated.
+
+
+3.
+
+
+

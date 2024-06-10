@@ -1,0 +1,153 @@
+--------------------------------
+//Illustration of Procedures
+--------------------------------
+
+*******************************************************************************************************
+//Write a PL/SQL block which makes use of a stored procedure Proj_emp ( emp_name varchar2(50) ) which finds all the details of the projects involved by the given employee.
+
+SQL> edit E:\plsql_ans\procedure_illustartion.sql
+
+
+[[
+create or replace procedure proj_emp(emp_name IN varchar)
+AS
+
+CURSOR projectfinder IS select projname from emp_proj ep INNER JOIN employee e ON e.empno=ep.empno INNER JOIN project p on ep.projno=p.projno where empname=emp_name;
+
+project_name varchar(30);
+
+begin
+
+OPEN projectfinder;
+LOOP
+FETCH projectfinder INTO project_name;
+EXIT when projectfinder%NOTFOUND;
+dbms_output.put_line(project_name);
+
+END LOOP;
+
+CLOSE projectfinder;
+
+
+end;
+]]
+
+
+SQL> @ E:\plsql_ans\procedure_illustartion.sql
+ 22  /
+
+Procedure created.
+
+SQL> edit E:\plsql_ans\procedure_illustartion_main.sql
+
+
+[[
+
+declare
+empname varchar(30);
+
+begin 
+empname:=&employee_name;
+
+proj_emp(empname);
+
+end;
+
+]]
+
+SQL> @ E:\plsql_ans\procedure_illustartion_main.sql
+ 10  /
+Enter value for employee_name: 'PRIYA TOMY'
+old   5: empname:=&employee_name;
+new   5: empname:='PRIYA TOMY';
+USER EDUCATION
+QUERY SERVICES
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+
+
+*******************************************************************************************************\
+//Write a procedure to check whether a string is a palindrome . Call the procedure to list all the 
+palindrome names in the employee table.
+
+
+
+SQL> edit E:\plsql_ans\procedure_illustartion_2.sql
+
+[[
+CREATE OR REPLACE PROCEDURE palindrome_checker(arg in varchar2) 
+AS
+rev varchar2(30);
+
+begin
+
+SELECT reverse(arg) INTO rev from DUAL;
+if arg = rev
+THEN
+dbms_output.put_line(arg);
+end if;
+
+end;
+
+]]
+
+
+
+SQL> @ E:\plsql_ans\procedure_illustartion_2.sql
+ 14  /
+
+Procedure created.
+
+SQL> edit E:\plsql_ans\procedure_illustartion_2_main.sql
+
+[[
+declare
+CURSOR empnames IS SELECT UPPER(empname) from employee;
+
+empname varchar(30);
+
+begin
+
+OPEN empnames;
+
+LOOP
+FETCH empnames INTO empname;
+EXIT WHEN empnames%NOTFOUND;
+palindrome_checker(empname);
+
+END LOOP;
+CLOSE empnames;
+
+end;
+]]
+
+
+SQL> @ E:\plsql_ans\procedure_illustartion_2_main.sql
+ 19  /
+
+PL/SQL procedure successfully completed.
+
+SQL> execute palindrome_checker('MALAYALAM');
+MALAYALAM
+
+PL/SQL procedure successfully completed.
+
+SQL> execute palindrome_checker('MALAYALA');
+
+PL/SQL procedure successfully completed.
+
+*******************************************************************************************************
+Modify the program using cursor to display the name of the employee and increment percentage of salary according to their working experiences, by calling a procedure for computing the increment based on years of experience using IN and OUT parameters. *Hint: Years of experience and Salary are the IN parameters and increment is the OUT parameter.
+
+*******************************************************************************************************
+--------------------------------
+//Illustration of functions
+--------------------------------
+Write a function to find the reverse of EmpNo in Employee table and display the EmpNo and Reversed(Emp No) of the first 5 employees using an SQL Query.
+*******************************************************************************************************
+Write a function that would check for the existence of an employee in the employee table given an EmpNo. If existing employee, check whether he is the manager of any department and display messages accordingly.
+*******************************************************************************************************
+Write a function to check whether a string is a palindrome and returns “palindrome” if palindrome else returns “Not Palindrome” if not palindrome. Call the function in a select statement to check all the palindrome names in the employee table.

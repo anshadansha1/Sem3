@@ -1,0 +1,505 @@
+***************************************************************************************************************
+//CURSORS
+
+//IMPLICIT AND EXPLICIT
+###############################################################################################################
+//IMPLICIT
+***************************************************************************************************************
+
+
+SQL> edit E:\plsql_ans\cursor1.sql
+
+
+[[
+
+declare
+
+begin
+update employee set salary=&salary where empno=&empno;
+
+if sql%found then
+dbms_output.put_line(sql%rowcount||'records are updated in the employee table');
+end if;
+
+end;
+
+
+
+]]
+
+SQL> @ E:\plsql_ans\cursor1.sql
+ 15  /
+Enter value for salary: 40000
+Enter value for empno: 'E0100'
+old   4: update employee set salary=&salary where empno=&empno;
+new   4: update employee set salary=40000 where empno='E0100';
+1 records are updated in the employee table
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+SQL> @ E:\plsql_ans\cursor1.sql
+ 15  /
+Enter value for salary: 80000
+Enter value for empno: 'E101'
+old   4: update employee set salary=&salary where empno=&empno;
+new   4: update employee set salary=80000 where empno='E101';
+No records are updated in the employee table
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+***************************************************************************************************************
+//The HRD manager decides to raise the salary of employees by 0.15. Write  a PL/SQL block to accept an employee number and update the salary of that employee. Display appropriate message based on the existence of the record in the employee table.
+
+//BEFORE
+SQL> select empno,salary from employee where empno='E0100';
+
+EMPNO          SALARY
+---------- ----------
+E0100           46000
+
+SQL> edit E:\plsql_ans\cursor_q1_HRD.sql
+
+[[
+
+declare
+
+begin
+
+update employee set salary=salary+salary*0.15 where empno=&empno;
+
+if sql%found then
+dbms_output.put_line(sql%rowcount ||' SALARY HAS BEEN UPDATED');
+
+else
+dbms_output.put_line('NO RECORDS UPDATED');
+
+end if;
+end;
+
+]]
+
+SQL> @ E:\plsql_ans\cursor_q1_HRD.sql
+ 15  /
+Enter value for empno: 'E0100'
+old   5: update employee set salary=salary+salary*0.15 where empno=&empno;
+new   5: update employee set salary=salary+salary*0.15 where empno='E0100';
+1 SALARY HAS BEEN UPDATED
+
+PL/SQL procedure successfully completed.
+
+//AFTER
+SQL> select empno,salary from employee where empno='E0100';
+
+EMPNO          SALARY
+---------- ----------
+E0100           52900
+
+SQL>
+
+
+***************************************************************************************************************
+//The HRD manager decides to raise the salary of employees working as ‘analyst’ by 0.15. Write  a cursor to update the salary of the employees. Display the no. of employee records that has been modified.
+
+
+
+
+SQL> select salary from employee where job='ANALYST';
+
+    SALARY
+----------
+     23800
+     28420
+
+SQL> edit E:\plsql_ans\cursor_q2_HRDanalyst.sql
+
+
+[[
+
+
+declare
+
+begin
+
+update employee set salary=salary+salary*0.15 where job='ANALYST';
+
+if sql%found then
+dbms_output.put_line(sql%rowcount||' records are updated');
+else
+dbms_output.put_line('No records are updated');
+
+end if;
+end;
+
+
+
+]]
+SQL> @ E:\plsql_ans\cursor_q2_HRDanalyst.sql
+ 14  /
+2 records are updated
+
+PL/SQL procedure successfully completed.
+
+SQL> select salary from employee where job='ANALYST';
+
+    SALARY
+----------
+     27370
+     32683
+
+SQL>
+
+
+***************************************************************************************************************
+
+###############################################################################################################
+//EXPLICIT CURSOR:
+Declare the cursor
+Open the cursor
+Fetch the data from cursor result into PL/SQL program variables
+Process the data as required using loop.
+Exit from loop
+Close the cursor
+
+
+**************************************************************************************************************
+//EXPICIT CUURSOR - EXAMPLE(USING ROWTYPE)
+
+SQL> edit E:\plsql_ans\explicit_cursor1.sql
+
+
+[[
+
+
+declare
+cursor empcur is 
+select empno,empname,salary from employee;
+
+emprec empcur%rowtype; 
+
+begin
+dbms_output.put_line('Employee details ');
+open empcur;
+fetch empcur into emprec;
+
+while empcur%found loop
+dbms_output.put_line('Emp No: '||emprec.empno);
+dbms_output.put_line('Emp Name : '||emprec.empname);
+dbms_output.put_line('Salary : '||emprec.salary);
+dbms_output.put_line('*************************');
+fetch empcur into emprec;
+
+end loop;
+
+close empcur;
+end;
+
+]]
+
+SQL> @ E:\plsql_ans\explicit_cursor1.sql
+ 23  /
+Employee details
+Emp No: E0020
+Emp Name : PHILIP VINCENT
+Salary : 41250
+*************************
+Emp No: E0030
+Emp Name : SHILVY K K
+Salary : 38250
+*************************
+Emp No: E0050
+Emp Name : ALFRIN LUIZ
+Salary : 40175
+*************************
+Emp No: E0060
+Emp Name : OSHINA ANTONY
+Salary : 32250
+*************************
+Emp No: E0070
+Emp Name : BINCY PAUL
+Salary : 36170
+*************************
+Emp No: E0090
+Emp Name : ANAMIKA PAUL
+Salary : 29750
+*************************
+Emp No: E0100
+Emp Name : ANEESH DENNY
+Salary : 52900
+*************************
+Emp No: E0110
+Emp Name : DONA ANICE SIBY
+Salary : 46500
+*************************
+Emp No: E0120
+Emp Name : JUNAID K V
+Salary : 29250
+*************************
+Emp No: E0130
+Emp Name : CHRISTEENA THOMAS
+Salary : 27370
+*************************
+Emp No: E0140
+Emp Name : JEFFIN DOMINIC
+Salary : 32683
+*************************
+Emp No: E0150
+Emp Name : JEWEL BIJOY
+Salary : 25280
+*************************
+Emp No: E0160
+Emp Name : MELLOW REEBA THOMAS
+Salary : 22250
+*************************
+Emp No: E0170
+Emp Name : JOHN VARGHESE
+Salary : 24680
+*************************
+Emp No: E0180
+Emp Name : ASHREENA HASSAN
+Salary : 21340
+*************************
+Emp No: E0190
+Emp Name : VISHAK VIJAYAKUMAR
+Salary : 20450
+*************************
+Emp No: E0200
+Emp Name : CORRINE ELIZABETH RODRIGUES
+Salary : 27740
+*************************
+Emp No: E0210
+Emp Name : MERLIN M.D
+Salary : 18270
+*************************
+Emp No: E0220
+Emp Name : MARIA JOHN
+Salary : 29840
+*************************
+Emp No: E0230
+Emp Name : VISHALAKSHI V PRABHU
+Salary : 22180
+*************************
+Emp No: E0240
+Emp Name : ANGEL PAUL
+Salary : 28760
+*************************
+Emp No: E0250
+Emp Name : RIYA TONEY
+Salary : 19180
+*************************
+Emp No: E0260
+Emp Name : PRIYA TOMY
+Salary : 17250
+*************************
+Emp No: E0270
+Emp Name : ARYAMOL ASOKAN
+Salary : 27380
+*************************
+Emp No: E0280
+Emp Name : GEO GEORGE
+Salary : 26250
+*************************
+Emp No: E0290
+Emp Name : JIMMY THOMSON
+Salary : 15340
+*************************
+Emp No: E0300
+Emp Name : ALAN PAYYAPPILLY
+Salary : 17750
+*************************
+Emp No: E0310
+Emp Name : BEN PETER MATHEW
+Salary : 15900
+*************************
+Emp No: E0320
+Emp Name : KRISHNANUNNI S
+Salary : 19950
+*************************
+Emp No: E0330
+Emp Name : AHALYA V A
+Salary : 25370
+*************************
+Emp No: E0340
+Emp Name : ANJALI NAIR
+Salary : 20370
+*************************
+Emp No: E0010
+Emp Name : ARNOLD LEONARD AMON
+Salary : 152750
+*************************
+
+PL/SQL procedure successfully completed.
+
+
+
+
+***************************************************************************************************************
+////EXPICIT CUURSOR - same EXAMPLE (USING TYPE)
+
+
+SQL> edit E:\plsql_ans\explicit_cursor2.sql
+[[
+
+declare
+cursor empcur is 
+select empno,empname,salary from employee;
+
+eno employee.empno%type; 
+ename employee.empname%type;
+sal employee.salary%type;
+
+begin
+dbms_output.put_line('Employee details ');
+open empcur;
+fetch empcur into eno,ename,sal;
+
+while empcur%found loop
+dbms_output.put_line('Emp No: '||eno);
+dbms_output.put_line('Emp Name : '||ename);
+dbms_output.put_line('Salary : '||sal);
+dbms_output.put_line('*************************');
+fetch empcur into eno,ename,sal;
+
+end loop;
+
+close empcur;
+end;
+
+]]
+
+SQL> @ E:\plsql_ans\explicit_cursor2.sql
+ 25  /
+Employee details
+Emp No: E0020
+Emp Name : PHILIP VINCENT
+Salary : 41250
+*************************
+Emp No: E0030
+Emp Name : SHILVY K K
+Salary : 38250
+*************************
+Emp No: E0050
+Emp Name : ALFRIN LUIZ
+Salary : 40175
+*************************
+Emp No: E0060
+Emp Name : OSHINA ANTONY
+Salary : 32250
+*************************
+Emp No: E0070
+Emp Name : BINCY PAUL
+Salary : 36170
+*************************
+Emp No: E0090
+Emp Name : ANAMIKA PAUL
+Salary : 29750
+*************************
+Emp No: E0100
+Emp Name : ANEESH DENNY
+Salary : 52900
+*************************
+Emp No: E0110
+Emp Name : DONA ANICE SIBY
+Salary : 46500
+*************************
+Emp No: E0120
+Emp Name : JUNAID K V
+Salary : 29250
+*************************
+Emp No: E0130
+Emp Name : CHRISTEENA THOMAS
+Salary : 27370
+*************************
+Emp No: E0140
+Emp Name : JEFFIN DOMINIC
+Salary : 32683
+*************************
+Emp No: E0150
+Emp Name : JEWEL BIJOY
+Salary : 25280
+*************************
+Emp No: E0160
+Emp Name : MELLOW REEBA THOMAS
+Salary : 22250
+*************************
+Emp No: E0170
+Emp Name : JOHN VARGHESE
+Salary : 24680
+*************************
+Emp No: E0180
+Emp Name : ASHREENA HASSAN
+Salary : 21340
+*************************
+Emp No: E0190
+Emp Name : VISHAK VIJAYAKUMAR
+Salary : 20450
+*************************
+Emp No: E0200
+Emp Name : CORRINE ELIZABETH RODRIGUES
+Salary : 27740
+*************************
+Emp No: E0210
+Emp Name : MERLIN M.D
+Salary : 18270
+*************************
+Emp No: E0220
+Emp Name : MARIA JOHN
+Salary : 29840
+*************************
+Emp No: E0230
+Emp Name : VISHALAKSHI V PRABHU
+Salary : 22180
+*************************
+Emp No: E0240
+Emp Name : ANGEL PAUL
+Salary : 28760
+*************************
+Emp No: E0250
+Emp Name : RIYA TONEY
+Salary : 19180
+*************************
+Emp No: E0260
+Emp Name : PRIYA TOMY
+Salary : 17250
+*************************
+Emp No: E0270
+Emp Name : ARYAMOL ASOKAN
+Salary : 27380
+*************************
+Emp No: E0280
+Emp Name : GEO GEORGE
+Salary : 26250
+*************************
+Emp No: E0290
+Emp Name : JIMMY THOMSON
+Salary : 15340
+*************************
+Emp No: E0300
+Emp Name : ALAN PAYYAPPILLY
+Salary : 17750
+*************************
+Emp No: E0310
+Emp Name : BEN PETER MATHEW
+Salary : 15900
+*************************
+Emp No: E0320
+Emp Name : KRISHNANUNNI S
+Salary : 19950
+*************************
+Emp No: E0330
+Emp Name : AHALYA V A
+Salary : 25370
+*************************
+Emp No: E0340
+Emp Name : ANJALI NAIR
+Salary : 20370
+*************************
+Emp No: E0010
+Emp Name : ARNOLD LEONARD AMON
+Salary : 152750
+*************************
+
+PL/SQL procedure successfully completed.

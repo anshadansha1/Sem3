@@ -1,0 +1,208 @@
+SQL> create table item(item_id varchar2(5) primary key,item_desc varchar2(30),item_unitprice number(5,2),item_stock int,constraint id_chk check(item_id like('IT%')));
+
+Table created.
+
+SQL> desc item;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEM_ID                                   NOT NULL VARCHAR2(5)
+ ITEM_DESC                                          VARCHAR2(30)
+ ITEM_UNITPRICE                                     NUMBER(5,2)
+ ITEM_STOCK                                         NUMBER(38)
+
+SQL> create table vendor(vendor_id varchar2(5) primary key,vendor_name varchar2(25),vendor_location varchar2(30),constraint vid_chk check(vendor_id like('V%')));
+
+Table created.
+
+SQL> desc vendor;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VENDOR_ID                                 NOT NULL VARCHAR2(5)
+ VENDOR_NAME                                        VARCHAR2(25)
+ VENDOR_LOCATION                                    VARCHAR2(30)
+
+SQL> create table purchase(pur_date date primary key,vendor_id varcahr2(5),item_id varchar2(5),qty_purchase int,foreign key(vendor_id) references vendor(vendor_id),foreign key(item_id) references item(item_id));
+create table purchase(pur_date date primary key,vendor_id varcahr2(5),item_id varchar2(5),qty_purchase int,foreign key(vendor_id) references vendor(vendor_id),foreign key(item_id) references item(item_id))
+                                                                  *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> create table purchase(pur_date date primary key,vendor_id varchar2(5),item_id varchar2(5),qty_purchase int,foreign key(vendor_id) references vendor(vendor_id),foreign key(item_id) references item(item_id));
+
+Table created.
+
+SQL> desc purchase
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PUR_DATE                                  NOT NULL DATE
+ VENDOR_ID                                          VARCHAR2(5)
+ ITEM_ID                                            VARCHAR2(5)
+ QTY_PURCHASE                                       NUMBER(38)
+
+SQL>
+
+SQL> insert into item values('IT100','Pen',10,97);
+
+1 row created.
+
+SQL> insert into item values('IT101','Paper',0.5,620);
+
+1 row created.
+
+SQL> insert into item values('IT102','Pencil',2,80);
+
+1 row created.
+
+SQL> insert into item values('IT103','Stapler',60,15);
+
+1 row created.
+
+SQL> select * from item;
+
+ITEM_ ITEM_DESC                      ITEM_UNITPRICE ITEM_STOCK
+----- ------------------------------ -------------- ----------
+IT100 Pen                                        10         97
+IT101 Paper                                      .5        620
+IT102 Pencil                                      2         80
+IT103 Stapler                                    60         15
+
+SQL>
+
+SQL> insert into vendor values('V1','Raghav S','Kochi');
+
+1 row created.
+
+SQL> insert into vendor values('V2','Simon John','Kozhikode');
+
+1 row created.
+
+SQL> insert into vendor values('V3','Swetha K','Malappuram');
+
+1 row created.
+
+SQL> insert into vendor values('V4','Manoj Kumar','Kochi');
+
+1 row created.
+
+SQL> select * from vendor;
+
+VENDO VENDOR_NAME               VENDOR_LOCATION
+----- ------------------------- ------------------------------
+V1    Raghav S                  Kochi
+V2    Simon John                Kozhikode
+V3    Swetha K                  Malappuram
+V4    Manoj Kumar               Kochi
+
+SQL>
+
+
+SQL> insert into purchase values('12-jul-2021','V1','IT102',20);
+
+1 row created.
+
+
+SQL> insert into purchase values('11-jul-2021','V1','IT100',30);
+
+1 row created.
+
+SQL> insert into purchase values('13-jul-2021','V2','IT103',5);
+
+1 row created.
+
+SQL> insert into purchase values('13-aug-2021','V3','IT101',20);
+
+1 row created.
+
+SQL> insert into purchase values('14-aug-2021','V1','IT101',32);
+
+1 row created.
+
+
+SQL> select * from purchase;
+
+PUR_DATE  VENDO ITEM_ QTY_PURCHASE
+--------- ----- ----- ------------
+12-JUL-21 V1    IT102           20
+11-JUL-21 V1    IT100           30
+13-JUL-21 V2    IT103            5
+13-AUG-21 V3    IT101           20
+14-AUG-21 V1    IT101           32
+
+SQL>
+
+
+[[[
+1.
+
+SQL> select item_desc from item where item_desc like('P%') and item_stock < 100;
+
+ITEM_DESC
+------------------------------
+Pen
+Pencil
+
+SQL>
+
+2.
+
+SQL> select item_desc from item i join purchase p on i.item_id=p.item_id where to_char(pur_date,'mon')='aug';
+
+ITEM_DESC
+------------------------------
+Paper
+Paper
+
+SQL>
+
+
+3.
+
+SQL> select vendor_name from vendor where vendor_location='Kochi';
+
+VENDOR_NAME
+-------------------------
+Raghav S
+Manoj Kumar
+
+SQL> select vendor_name from vendor v join purchase p on v.vendor_id=p.vendor_id join item i on p.item_id=i.item_id where vendor_location='Kochi';
+
+VENDOR_NAME
+-------------------------
+Raghav S
+Raghav S
+Raghav S
+
+SQL> select sum(p.qty_purchase) from vendor v join purchase p on v.vendor_id=p.vendor_id join item i on p.item_id=i.item_id where vendor_location='Kochi' group by p.vendor_id;
+
+SUM(P.QTY_PURCHASE)
+-------------------
+                 82
+
+SQL>
+
+
+4.
+
+
+SQL> select item_desc from item where item_stock > (select avg(item_stock) from item);
+
+ITEM_DESC
+------------------------------
+Paper
+
+SQL>
+
+5.
+
+SQL> select i.item_id,i.item_desc,i.item_unitprice,i.item_stock from item i join purchase p on i.item_id=p.item_id join vendor v on p.vendor_id=v.vendor_id where vendor_name='Raghav S';
+
+ITEM_ ITEM_DESC                      ITEM_UNITPRICE ITEM_STOCK
+----- ------------------------------ -------------- ----------
+IT102 Pencil                                      2         80
+IT100 Pen                                        10         97
+IT101 Paper                                      .5        620
+
+SQL>
+
+

@@ -1,0 +1,194 @@
+DATE : 15/02/2024
+
+
+Laravel - [help you create extensible PHP-based websites and web applications at scale.]
+Framework  -[to provide a common structure so that developers don't have to redo it from scratch and can reuse the code provided.]
+----------------------------------------------------------------------------------------------
+->CREATE a Folder somewhere and open that in VSCODE
+
+----------------------------------------------------------------------------------------------
+->To check PHP installed or not
+
+PS E:\MUHAMMAD ANSHAD P A> php --version
+
+------------------------------------------------------------------------------------------------
+->To check composer is installed
+
+PS E:\MUHAMMAD ANSHAD P A> composer
+ //The main purpose of the composer is to install the dependencies or libraries for an application.
+----------------------------------------------------------------------------------------------
+
+->TO CREATE a PROJECT in Laravel
+
+PS E:\MUHAMMAD ANSHAD P A> composer create-project laravel/laravel sample
+
+
+----------------------------------------------------------------------------------------------
+->Now open folder "sample"in VSCODE
+----------------------------------------------------------------------------------------------
+->Now connect to  Localhost:
+
+PS E:\MUHAMMAD ANSHAD P A\sample> php artisan serve
+
+   INFO  Server running on [http://127.0.0.1:8000].  
+
+  Press Ctrl+C to stop the server
+
+->[ctrl + click ] on the link.
+----------------------------------------------------------------------------------------------
+->Go to "routes"->web.php
+
+Route::get('/', function () {  
+    return view('welcome');
+});
+
+->"/" means default page
+----------------------------------------------------------------------------------------------
+-> Go to "reasources"->"views"->welcome.blade.php
+----------------------------------------------------------------------------------------------
+
+->Go ot "app"->"Http"->"Controller"->
+->Now Create a controller :
+
+PS E:\MUHAMMAD ANSHAD P A\sample> php artisan  make:controller FirstController
+
+   INFO  Controller [E:\MUHAMMAD ANSHAD P A\sample\app\Http\Controllers\FirstController.php] created successfully.  
+
+
+----------------------------------------------------------------------------------------------
+->Now open that created controller :  Go ot "app"->"Http"->"Controller"->FirstController.php
+->Then Create a function homepage():
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class FirstController extends Controller
+{
+    //create a function
+    function homepage(){
+        return '<h1>Home page</h1><br><a href="/about">Go to About page</a>';
+    }
+
+    function about(){
+        return '<h1>About page</h1><br><a href="/">Go to Home</a>';
+    }
+}
+
+->We can have many functions here.
+----------------------------------------------------------------------------------------------
+->Go to "routes"->web.php
+->import controller in web.php
+
+use App\Http\Controllers\FirstController;
+
+-> Remove code ,function:
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+-> Add Route code :
+
+Route::get('/',[FirstController::Class, 'homepage']);    //-> "/" for default page
+Route::get('/about',[FirstController::Class, 'about']);  //-> "/about" for specific page we have give its name.
+
+----------------------------------------------------------------------------------------------
+->Now instead of returning some page.Give view name.
+->So first create a View inside : [Go to "reasources"->"views"->homepage.blade.php]
+
+
+function homepage(){
+        // return '<h1>Home page</h1><br><a href="/about">Go to About page</a>';
+        return view("homepage");
+    }
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-->FirstController
+
+  function homepage(){
+        // return '<h1>Home page</h1><br><a href="/about">Go to About page</a>';
+        $names_array = ["Tommy","Tony"];
+        return view("homepage",['name'=>$names_array]);
+    }
+->homepage:
+
+	<h1>Array listing <br> @foreach ($name as $i)
+            {{$i}}
+        @endforeach
+    	</h1>
+
+----------------------------------------------------------------------------------------------
+->Crete a Folder in named "components" : views->components
+->Then in that folder cretae a php file : "layout.blade.php"
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+22/02/2024
+
+-> install mysql server and workbench
+
+https://dev.mysql.com/downloads/installer/
+
+----------------------------------------------------------------------------------------------
+->After creating "layout.blade.php" 
+->Make a layout so that we can reuse it.
+
+<!--NAVBAR-->
+from bootstrap navbar
+<!--NAVBAR END-->
+
+{{$slot}} 
+
+<!--FOOTER-->
+footer 
+<!--FOOTER END-->
+
+
+----------------------------------------------------------------------------------------------
+->So after that now you can use this layout by just definig the body content inside "<x-layout></x-layout>" tags.
+
+----------------------------------------------------------------------------------------------
+->After installing mysql workbench go to and copy path : 
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+->Now open search "Edit environment variables" and Double click on path and add new path with path.
+----------------------------------------------------------------------------------------------
+->Now open Mysql Workbench ->
+->In Bottom select "schema" and right click and select "create schema" and give a name to database schema and apply.
+----------------------------------------------------------------------------------------------
+->Go to ".env" and change the PORT(if required) and password:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_sample
+DB_USERNAME=root
+DB_PASSWORD=root
+----------------------------------------------------------------------------------------------
+->To migrate the database to mysql:
+
+->[Go to: Database->migrations->2014_10_12_....]
+
+->Open terminal :
+PS E:\MUHAMMAD ANSHAD P A\sample> php artisan migrate:fresh
+
+Dropping all tables ................................................................................................................... 427ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................... 77ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table .................................................................................................. 109ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ................................................................................... 15ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................................................................................. 55ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .................................................................................. 78ms DONE
+
+
+->Now the database contents is migrated.
+----------------------------------------------------------------------------------------------

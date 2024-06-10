@@ -1,0 +1,158 @@
+PL/SQL
+----------------------------------------------------------------------------------
+
+SET 1
+----------------------------------------------------------------------------------
+
+
+SQL> create table backupaccount(acc_no varchar2(5),acc_balance int,entry_date date,operation_type varchar2(10));
+
+Table created.
+
+SQL> desc backupaccount;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ACC_NO                                                         VARCHAR2(5)
+ ACC_BALANCE                                                    NUMBER(38)
+ ENTRY_DATE                                                     DATE
+ OPERATION_TYPE                                                 VARCHAR2(10)
+
+SQL> edit E:\plsql\set1_trigger.sql
+
+[[[
+CREATE OR REPLACE TRIGGER acc_trig
+BEFORE delete or update 
+ON account
+
+for each row
+
+BEGIN
+
+	IF :old.acc_balance <= 50 
+	THEN
+	RAISE_APPLICATION_ERROR(-20500,'LOW BALANCE!');
+	END IF;
+
+	
+	IF deleting 
+	THEN
+	insert into backupaccount values(:old.acc_no,:old.acc_balance,sysdate,'DELETE');
+	
+	ELSIF updating
+	THEN
+	insert into backupaccount values(:old.acc_no,:old.acc_balance,sysdate,'UPDATE');
+	
+	END IF;
+END;
+]]]
+
+
+SQL> update account set acc_balance=50 where acc_no='A5000';
+update account set acc_balance=50 where acc_no='A5000'
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.ACBAL_CHK) violated
+
+
+SQL> delete from account where acc_no='A5003';
+
+1 row deleted.
+
+SQL> select * from account;
+
+ACC_N AC ACC_BALANCE CUST_ BR_ID
+----- -- ----------- ----- -----
+A5000 SB       20000 C100  B1
+A5001 SB        1500 C101  B3
+A5002 CU       63000 C100  B1
+
+SQL> select * from backupaccount;
+
+ACC_N ACC_BALANCE ENTRY_DAT OPERATION_
+----- ----------- --------- ----------
+A5003       25000 22-NOV-23 DELETE
+
+SQL>
+
+----------------------------------------------------------------------------------
+
+SET 2
+----------------------------------------------------------------------------------
+
+SQL> edit E:\plsql\set2_trigger.sql
+
+[[[
+CREATE OR REPLACE TRIGGER ship_check
+BEFORE
+insert 
+on shipment
+for each row
+
+DECLARE
+	stock number(5,2);
+BEGIN
+	select parts_stock INTO stock from parts where parts_id=:new.parts_id; 
+	
+	IF inserting
+	THEN 
+	stock:=stock+:new.parts_qty;
+		IF stock > 500
+		THEN 
+		RAISE_APPLICATION_ERROR(-20500,'STOCK LIMIT EXCEEDED!');
+		
+		ELSE
+		update parts set parts_stock=stock where parts_id=:new.parts_id;
+		END IF;
+	END IF;
+END;
+]]]
+
+
+
+SQL> select * from parts;
+
+PARTS PARTS_NAME                     PARTS_COLOR          PARTS_STOCK
+----- ------------------------------ -------------------- -----------
+P100  Nut                            Red                          200
+P101  Bolt                           Green                        175
+P102  Screw                          Red                          200
+P103  Cam                            Blue                         145
+
+SQL> select * from shipment;
+
+SHIP_DATE SP_ID PARTS  PARTS_QTY
+--------- ----- ----- ----------
+12-AUG-20 S100  P100          25
+16-AUG-20 S101  P100          30
+25-SEP-20 S100  P101          25
+16-MAY-20 S100  P103          40
+14-AUG-20 S102  P100          45
+
+SQL> insert into shipment values('20-aug-2020','S100','P100',400);
+insert into shipment values('20-aug-2020','S100','P100',400)
+            *
+ERROR at line 1:
+ORA-20500: STOCK LIMIT EXCEEDED!
+ORA-06512: at "SYSTEM.SHIP_CHECK", line 11
+ORA-04088: error during execution of trigger 'SYSTEM.SHIP_CHECK'
+
+
+SQL> insert into shipment values('20-aug-2020','S100','P100',50);
+
+1 row created.
+
+SQL> select * from parts;
+
+PARTS PARTS_NAME                     PARTS_COLOR          PARTS_STOCK
+----- ------------------------------ -------------------- -----------
+P100  Nut                            Red                          250
+P101  Bolt                           Green                        175
+P102  Screw                          Red                          200
+P103  Cam                            Blue                         145
+
+SQL>
+
+----------------------------------------------------------------------------------
+
+SET 3
+----------------------------------------------------------------------------------

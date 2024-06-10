@@ -1,0 +1,22 @@
+
+****************************************************************
+//SELECTING FROM TEMPORARY TABLE :(LOWERCASING) 
+
+SQL> select lower('SUNU') from dual;
+
+LOWE
+----
+sunu
+
+*****************************************************************
+//UPPER - uppercasing 
+
+SQL> select upper(deptname) from department;
+
+*****************************************************************
+//INITCAP - initial letter cap :
+SQL> select initcap(deptname) as DeptName from department;
+
+*****************************************************************
+//SUBSTR - 
+SQL> select substr(deptname,3,5) from department;
