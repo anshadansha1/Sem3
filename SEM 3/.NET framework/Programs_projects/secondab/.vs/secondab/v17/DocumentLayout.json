@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\secondab\\mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|solutionrelative:mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\secondab\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\secondab\\featurephone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|solutionrelative:featurephone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\secondab\\smartphone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F09EDE8-E399-410D-B1DB-688B73B64806}|secondab.csproj|solutionrelative:smartphone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Featurephone.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Featurephone.cs",
+              "RelativeDocumentMoniker": "Featurephone.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Featurephone.cs",
+              "RelativeToolTip": "Featurephone.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T04:00:32.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Smartphone.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Smartphone.cs",
+              "RelativeDocumentMoniker": "Smartphone.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Smartphone.cs",
+              "RelativeToolTip": "Smartphone.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T03:59:50.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mobile.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Mobile.cs",
+              "RelativeDocumentMoniker": "Mobile.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Mobile.cs",
+              "RelativeToolTip": "Mobile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T03:41:55.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\secondab\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T03:40:56.812Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

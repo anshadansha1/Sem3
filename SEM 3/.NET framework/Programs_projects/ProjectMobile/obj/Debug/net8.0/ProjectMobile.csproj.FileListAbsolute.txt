@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\bin\Debug\net8.0\ProjectMobile.exe
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\bin\Debug\net8.0\ProjectMobile.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\bin\Debug\net8.0\ProjectMobile.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\bin\Debug\net8.0\ProjectMobile.dll
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\bin\Debug\net8.0\ProjectMobile.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.dll
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\refint\ProjectMobile.dll
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ProjectMobile.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ProjectMobile\obj\Debug\net8.0\ref\ProjectMobile.dll

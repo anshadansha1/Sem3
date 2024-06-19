@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\bin\Debug\net8.0\PartialClass2.exe
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\bin\Debug\net8.0\PartialClass2.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\bin\Debug\net8.0\PartialClass2.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\bin\Debug\net8.0\PartialClass2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\bin\Debug\net8.0\PartialClass2.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\refint\PartialClass2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\PartialClass2.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\PartialClass2\obj\Debug\net8.0\ref\PartialClass2.dll

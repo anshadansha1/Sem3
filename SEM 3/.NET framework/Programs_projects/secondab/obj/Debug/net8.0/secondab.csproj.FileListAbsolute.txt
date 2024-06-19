@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\bin\Debug\net8.0\secondab.exe
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\bin\Debug\net8.0\secondab.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\bin\Debug\net8.0\secondab.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\bin\Debug\net8.0\secondab.dll
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\bin\Debug\net8.0\secondab.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.dll
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\refint\secondab.dll
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\secondab.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\secondab\obj\Debug\net8.0\ref\secondab.dll

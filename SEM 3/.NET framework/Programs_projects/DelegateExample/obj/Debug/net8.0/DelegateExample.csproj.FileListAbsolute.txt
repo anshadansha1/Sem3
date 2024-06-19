@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\bin\Debug\net8.0\DelegateExample.exe
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\bin\Debug\net8.0\DelegateExample.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\bin\Debug\net8.0\DelegateExample.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\bin\Debug\net8.0\DelegateExample.dll
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\bin\Debug\net8.0\DelegateExample.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.dll
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\refint\DelegateExample.dll
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\DelegateExample.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\DelegateExample\obj\Debug\net8.0\ref\DelegateExample.dll

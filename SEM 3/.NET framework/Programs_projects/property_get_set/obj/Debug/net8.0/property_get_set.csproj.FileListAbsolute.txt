@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\bin\Debug\net8.0\property_get_set.exe
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\bin\Debug\net8.0\property_get_set.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\bin\Debug\net8.0\property_get_set.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\bin\Debug\net8.0\property_get_set.dll
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\bin\Debug\net8.0\property_get_set.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.dll
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\refint\property_get_set.dll
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\property_get_set.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\property_get_set\obj\Debug\net8.0\ref\property_get_set.dll
