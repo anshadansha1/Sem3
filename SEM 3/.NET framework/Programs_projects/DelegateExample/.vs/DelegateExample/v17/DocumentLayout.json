@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\",
+  "WorkspaceRootPath": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{034B3091-AA9E-45E9-BF49-2639A852006C}|DelegateExample.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\delegateexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034B3091-AA9E-45E9-BF49-2639A852006C}|DelegateExample.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\DM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034B3091-AA9E-45E9-BF49-2639A852006C}|DelegateExample.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\delegateexample\\mathoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034B3091-AA9E-45E9-BF49-2639A852006C}|DelegateExample.csproj|solutionrelative:mathoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\MathOperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MathOperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034B3091-AA9E-45E9-BF49-2639A852006C}|DelegateExample.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\delegateexample\\dm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034B3091-AA9E-45E9-BF49-2639A852006C}|DelegateExample.csproj|solutionrelative:dm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "DM.cs",
-              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\DM.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\DM.cs",
               "RelativeDocumentMoniker": "DM.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\DM.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\DM.cs",
               "RelativeToolTip": "DM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -41,24 +41,24 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MathOperation.cs",
-              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\MathOperation.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\MathOperation.cs",
               "RelativeDocumentMoniker": "MathOperation.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\MathOperation.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\MathOperation.cs",
               "RelativeToolTip": "MathOperation.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAsAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T06:08:49.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\Program.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\DelegateExample\\Program.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\DelegateExample\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwB4AAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T06:02:56.16Z",
               "EditorCaption": ""

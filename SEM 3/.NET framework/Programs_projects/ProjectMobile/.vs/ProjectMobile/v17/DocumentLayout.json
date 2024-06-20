@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\",
+  "WorkspaceRootPath": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{986626BC-B097-47EB-BD9D-85090064F9BC}|ProjectMobile.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\projectmobile\\android.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{986626BC-B097-47EB-BD9D-85090064F9BC}|ProjectMobile.csproj|solutionrelative:android.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{986626BC-B097-47EB-BD9D-85090064F9BC}|ProjectMobile.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\projectmobile\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{986626BC-B097-47EB-BD9D-85090064F9BC}|ProjectMobile.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Android.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Android.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{986626BC-B097-47EB-BD9D-85090064F9BC}|ProjectMobile.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\projectmobile\\mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{986626BC-B097-47EB-BD9D-85090064F9BC}|ProjectMobile.csproj|solutionrelative:mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Mobile.cs",
-              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\Mobile.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Mobile.cs",
               "RelativeDocumentMoniker": "Mobile.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\Mobile.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Mobile.cs",
               "RelativeToolTip": "Mobile.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwC4AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T03:54:08.396Z",
               "IsPinned": true,
@@ -40,29 +40,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Android.cs",
-              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\Android.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Android.cs",
               "RelativeDocumentMoniker": "Android.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\Android.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Android.cs",
               "RelativeToolTip": "Android.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA5wA0AAAAFAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T04:38:19.504Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\Program.cs",
+              "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ProjectMobile\\Program.cs",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\Programs_projects\\ProjectMobile\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAQwBUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T03:44:37.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T03:44:37.14Z"
             }
           ]
         }

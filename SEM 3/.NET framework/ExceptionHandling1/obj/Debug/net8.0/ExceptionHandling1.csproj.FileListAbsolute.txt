@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\bin\Debug\net8.0\ExceptionHandling1.exe
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\bin\Debug\net8.0\ExceptionHandling1.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\bin\Debug\net8.0\ExceptionHandling1.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\bin\Debug\net8.0\ExceptionHandling1.dll
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\bin\Debug\net8.0\ExceptionHandling1.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.dll
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\refint\ExceptionHandling1.dll
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ExceptionHandling1.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ExceptionHandling1\obj\Debug\net8.0\ref\ExceptionHandling1.dll

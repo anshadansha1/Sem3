@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\bin\Debug\net8.0\GenericMethod.exe
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\bin\Debug\net8.0\GenericMethod.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\bin\Debug\net8.0\GenericMethod.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\bin\Debug\net8.0\GenericMethod.dll
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\bin\Debug\net8.0\GenericMethod.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.dll
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\refint\GenericMethod.dll
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\GenericMethod.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\GenericMethod\obj\Debug\net8.0\ref\GenericMethod.dll
