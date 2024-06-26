@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\threads\bin\Debug\net8.0\threads.exe
+E:\MCA\Semesters\SEM 3\.NET framework\threads\bin\Debug\net8.0\threads.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\threads\bin\Debug\net8.0\threads.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\threads\bin\Debug\net8.0\threads.dll
+E:\MCA\Semesters\SEM 3\.NET framework\threads\bin\Debug\net8.0\threads.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.dll
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\refint\threads.dll
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\threads.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\threads\obj\Debug\net8.0\ref\threads.dll

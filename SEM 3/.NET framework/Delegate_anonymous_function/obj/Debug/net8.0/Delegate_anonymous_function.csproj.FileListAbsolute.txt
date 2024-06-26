@@ -1,0 +1,15 @@
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\bin\Debug\net8.0\Delegate_anonymous_function.exe
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\bin\Debug\net8.0\Delegate_anonymous_function.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\bin\Debug\net8.0\Delegate_anonymous_function.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\bin\Debug\net8.0\Delegate_anonymous_function.dll
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\bin\Debug\net8.0\Delegate_anonymous_function.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.dll
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\refint\Delegate_anonymous_function.dll
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\Delegate_anonymous_function.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\Delegate_anonymous_function\obj\Debug\net8.0\ref\Delegate_anonymous_function.dll
