@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MenuBar</string>
+    <string name="kerala">Kerala</string>
+    <string name="tamil_nadu">Tamil Nadu</string>
+    <string name="karnataka">Karnataka</string>
+    <string name="andra_pradesh">Andra Pradesh</string>
+    <string name="gujarat">Gujarat</string>
+    <string name="punjab">Punjab</string>
+    <string name="others">Others</string>
+    <string name="goa">Goa</string>
+    <string name="jammu">Jammu</string>
+    <string name="menubar">MENUBAR</string>
+</resources>
