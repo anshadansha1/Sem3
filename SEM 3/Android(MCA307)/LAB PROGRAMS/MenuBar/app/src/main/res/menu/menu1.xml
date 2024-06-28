@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item1"
+        android:title="@string/kerala" />
+    <item
+        android:id="@+id/item2"
+        android:title="@string/tamil_nadu" />
+    <item
+        android:id="@+id/item3"
+        android:title="@string/karnataka" />
+    <item
+        android:id="@+id/item4"
+        android:title="@string/andra_pradesh" ></item>
+    <group android:id="@+id/group1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/item5"
+            android:title="@string/gujarat" />
+        <item
+            android:id="@+id/item6"
+            android:title="@string/punjab" ></item>
+    </group>
+    <item
+        android:id="@+id/submenu"
+        android:title="@string/others" >
+        <menu >
+            <item
+                android:id="@+id/item7_1"
+                android:title="@string/goa" />
+            <item
+                android:id="@+id/item7_2"
+                android:title="@string/jammu" />
+        </menu>
+    </item>
+</menu>
