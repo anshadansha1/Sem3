@@ -48,4 +48,14 @@
             android:text="Row2,Col2"
             android:textSize="24sp" />
     </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Main" />
+    </TableRow>
 </TableLayout>

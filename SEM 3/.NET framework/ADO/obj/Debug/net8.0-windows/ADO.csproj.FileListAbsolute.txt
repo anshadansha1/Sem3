@@ -1,0 +1,7 @@
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.Form1.resources
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.csproj.GenerateResource.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ADO\obj\Debug\net8.0-windows\ADO.sourcelink.json

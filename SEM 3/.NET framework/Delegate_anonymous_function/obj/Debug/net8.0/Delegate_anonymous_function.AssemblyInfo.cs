@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Delegate_anonymous_function")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2699ef4b8ff6f3ba3e430c71a46339ea04c1cbcf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28fb5db0355f665dc9abad93b0b683d82f3b1a6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Delegate_anonymous_function")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Delegate_anonymous_function")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

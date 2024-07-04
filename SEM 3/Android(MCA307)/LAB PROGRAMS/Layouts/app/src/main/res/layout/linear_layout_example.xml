@@ -23,4 +23,10 @@
         android:layout_width="match_parent"
         android:layout_height="83dp"
         android:text="Button2" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Main" />
 </LinearLayout>

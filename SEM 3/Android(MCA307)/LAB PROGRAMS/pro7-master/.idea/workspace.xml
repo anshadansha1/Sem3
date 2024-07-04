@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef5526f0-c19f-4745-82ef-57b7be8768da" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/java/com/example/actionbar_and_tabs/FragmentOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/java/com/example/actionbar_and_tabs/FragmentThree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/java/com/example/actionbar_and_tabs/FragmentTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/java/com/example/actionbar_and_tabs/ViewPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/res/layout/fragment_one.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/res/layout/fragment_three.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ActionBar_and_Tabs/app/src/main/res/layout/fragment_two.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PopupMenu/app/src/main/res/menu/popup_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SEM 1/LAB _DS/C LAB SESSIONS/DONE" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../SEM 1/LAB _DS/C LAB SESSIONS/DONE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SEM 2/JAVA PROGRAMMING (MCA202)" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../SEM 2/JAVA PROGRAMMING (MCA202)" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NOTES/7. Menus in Android.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2ikQXIzUepB3T8IOFKc9h3aPQWb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "newbranch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/MCA/Semesters/SEM 3/Android(MCA307)/LAB PROGRAMS/pro7-master/pro7-master"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef5526f0-c19f-4745-82ef-57b7be8768da" name="Changes" comment="" />
+      <created>1720032132368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720032132368</updated>
+    </task>
+    <servers />
+  </component>
+</project>
