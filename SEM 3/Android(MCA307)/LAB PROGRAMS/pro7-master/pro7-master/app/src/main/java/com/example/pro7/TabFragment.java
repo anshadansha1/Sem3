@@ -38,15 +38,15 @@ public class TabFragment extends Fragment {
         switch (position) {
             case 0:
                 textView.setText("Tab 1 Content");
-//                imageView.setImageResource(R.drawable.ic_tab1_image);
+               imageView.setImageResource(R.drawable.aimg1);
                 break;
             case 1:
                 textView.setText("Tab 2 Content");
-//                imageView.setImageResource(R.drawable.ic_tab2_image);
+               imageView.setImageResource(R.drawable.aimg2);
                 break;
             case 2:
                 textView.setText("Tab 3 Content");
-//                imageView.setImageResource(R.drawable.ic_tab3_image);
+               imageView.setImageResource(R.drawable.aimg3);
                 break;
         }
 
