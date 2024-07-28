@@ -4,10 +4,23 @@
 import mysql.connector
 
 #Step 2 : Establish connection 
-conn = mysql.connector.connect(
+con = mysql.connector.connect(
     host="localhost",
-    user="marsh",
+    user="root",
     password="",
-    database=""
+    database="python_test"
 )
+
+#Step 3 : Create cursor
+mycursor = con.cursor()
+
+#Step 4 : Create table
+
+mycursor.execute("CREATE TABLE students(name VARCHAR(255),age int)")
+
+#Step 5 : Insert data to table
+sql = "INSERT INTO"
+
+
+
 
