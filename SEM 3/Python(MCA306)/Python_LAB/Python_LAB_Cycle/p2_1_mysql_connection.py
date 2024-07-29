@@ -1,4 +1,4 @@
-#2.1 : Program to implement mysql 
+#2.1 : Program to implement database using mysql 
 
 #Step 1 : import mysql connector
 import mysql.connector

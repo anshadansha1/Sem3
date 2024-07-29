@@ -75,7 +75,7 @@ def connect_to_sqlite(db_file):
 
 if __name__ == "__main__":
     # Use an absolute path for the database file
-    db_path = "E:\MCA\Semesters\SEM 3\Python(MCA306)\Python_LAB\Python_LAB_Cycle\DB_sqlite3.db"
+    db_path = "test2_database.db"
     connect_to_sqlite(db_path)
     
     # Check if the file was created
