@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">intent3_sum</string>
+    <string name="calculate_sum">Calculate Sum</string>
+</resources>
