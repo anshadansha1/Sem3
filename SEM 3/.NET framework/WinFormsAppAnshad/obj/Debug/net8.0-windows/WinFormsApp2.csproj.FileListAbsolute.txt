@@ -1,0 +1,50 @@
+C:\Users\vargh\source\repos\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.exe
+C:\Users\vargh\source\repos\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.deps.json
+C:\Users\vargh\source\repos\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.runtimeconfig.json
+C:\Users\vargh\source\repos\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.dll
+C:\Users\vargh\source\repos\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.pdb
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Form1.resources
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.GenerateResource.cache
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfoInputs.cache
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfo.cs
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.dll
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\refint\WinFormsApp2.dll
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.pdb
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.genruntimeconfig.cache
+C:\Users\vargh\source\repos\WinFormsApp2\obj\Debug\net8.0-windows\ref\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.exe
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Form1.resources
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.GenerateResource.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\refint\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsApp2\obj\Debug\net8.0-windows\ref\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\bin\Debug\net8.0-windows\WinFormsApp2.exe
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\bin\Debug\net8.0-windows\WinFormsApp2.deps.json
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\bin\Debug\net8.0-windows\WinFormsApp2.runtimeconfig.json
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\bin\Debug\net8.0-windows\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\bin\Debug\net8.0-windows\WinFormsApp2.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.Form1.resources
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.csproj.GenerateResource.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.sourcelink.json
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\refint\WinFormsApp2.dll
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\WinFormsApp2.genruntimeconfig.cache
+E:\MCA\Semesters\SEM 3\.NET framework\WinFormsAppAnshad\obj\Debug\net8.0-windows\ref\WinFormsApp2.dll

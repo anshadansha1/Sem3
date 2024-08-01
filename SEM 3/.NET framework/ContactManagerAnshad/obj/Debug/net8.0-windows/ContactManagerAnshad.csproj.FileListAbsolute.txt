@@ -1,0 +1,7 @@
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.Form1.resources
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.csproj.GenerateResource.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.AssemblyInfoInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.AssemblyInfo.cs
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\ContactManagerAnshad\obj\Debug\net8.0-windows\ContactManagerAnshad.sourcelink.json
