@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">sendBroadcast</string>
+    <string name="this_is_a_custom_broadcast_intent">This is a Custom Broadcast Intent</string>
+    <string name="send_broadcast">Send Broadcast</string>
+</resources>
