@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADO_Database_Form")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+342bc3a69f20d5c7f8a962f653443e12bb207240")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a624f188c7d7a806effe3ba6ace1a18fde34952")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADO_Database_Form")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADO_Database_Form")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
