@@ -1,0 +1,28 @@
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.csproj.AssemblyReference.cache
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.Properties.Resources.resources
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.csproj.GenerateResource.cache
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.csproj.CoreCompileInputs.cache
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\bin\Debug\StudentManagementApp.exe.config
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\bin\Debug\StudentManagementApp.exe
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\bin\Debug\StudentManagementApp.pdb
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.exe
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.pdb
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.MainForm.resources
+D:\MCA_PROGRAMS\3rdSEM\dotNET\StudentManagementApp\obj\Debug\StudentManagementApp.LoginForm.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\bin\Debug\StudentManagementApp.exe.config
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\bin\Debug\StudentManagementApp.exe
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\bin\Debug\StudentManagementApp.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\bin\Debug\System.Numerics.Vectors.dll
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.csproj.AssemblyReference.cache
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.LoginForm.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.MainForm.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.Properties.Resources.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.csproj.GenerateResource.cache
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.csproj.CoreCompileInputs.cache
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentM.507EE403.Up2Date
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.exe
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.pdb
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.RegistrationForm.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.ViewMarksForm.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.AddMarksForm.resources
+E:\MCA\Semesters\SEM 3\.NET framework\StudentManagementApp\obj\Debug\StudentManagementApp.StudentDashboard.resources
