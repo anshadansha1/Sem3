@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LoginForm_UsingSQLDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7ec039daaca80d9055486e3b80128f3a4a6dc4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9668abbbae733cce549cb0e0daeab0638bd4cd53")]
 [assembly: System.Reflection.AssemblyProductAttribute("LoginForm_UsingSQLDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LoginForm_UsingSQLDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

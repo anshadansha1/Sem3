@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\formreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|solutionrelative:formreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\ado_database_form\\formreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|solutionrelative:formreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|e:\\mca\\semesters\\sem 3\\.net framework\\ado_database_form\\formreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|solutionrelative:formreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6572B240-9D90-43D5-965F-43461064F8B8}|ADO_Database_Form.csproj|E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -34,16 +34,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormReg.cs [Design]",
               "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\FormReg.cs",
               "RelativeDocumentMoniker": "FormReg.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\FormReg.cs [Design]",
-              "RelativeToolTip": "FormReg.cs [Design]",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\FormReg.cs [Design]*",
+              "RelativeToolTip": "FormReg.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T04:15:04.674Z",
               "IsPinned": true,
@@ -51,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FormReg.cs",
               "DocumentMoniker": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\FormReg.cs",
               "RelativeDocumentMoniker": "FormReg.cs",
-              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\FormReg.cs",
-              "RelativeToolTip": "FormReg.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "ToolTip": "E:\\MCA\\Semesters\\SEM 3\\.NET framework\\ADO_Database_Form\\FormReg.cs*",
+              "RelativeToolTip": "FormReg.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T04:28:42.021Z",
               "EditorCaption": ""
