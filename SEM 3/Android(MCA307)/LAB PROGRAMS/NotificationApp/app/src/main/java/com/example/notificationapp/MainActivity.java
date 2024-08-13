@@ -37,10 +37,22 @@ public class MainActivity extends AppCompatActivity {
             //importance level of the channel
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID,name,importance);
-            
+
+
+            //Register channel with the android system
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
         }
     }
     public void notify(View v){
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,CHANNEL_ID)
+                .setSmallIcon(R.drawable.msg)
+                .setContentTitle("HEY THIS IS NOTIFICATION")
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManager man=(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        man.notify(1,builder.build());
 
     }
 }
