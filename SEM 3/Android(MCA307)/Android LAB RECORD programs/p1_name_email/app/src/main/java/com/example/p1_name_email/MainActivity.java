@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+//import
+import android.widget.TextView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,6 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        //Step 1 : Inintializing Textview
+        TextView tvname = findViewById(R.id.tvName);
+        TextView tvemail = findViewById(R.id.tvEmail);
+
+        //Step 2 : Replacing textviews with name and email
+        tvname.setText("Anshad");
+        tvemail.setText("marshu817@gmail.com");
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

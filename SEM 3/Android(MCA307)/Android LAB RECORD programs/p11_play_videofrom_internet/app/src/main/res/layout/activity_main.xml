@@ -29,6 +29,7 @@
         android:layout_marginTop="187dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="496dp"
+        android:onClick="PlayVideo"
         android:text="Play Video"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

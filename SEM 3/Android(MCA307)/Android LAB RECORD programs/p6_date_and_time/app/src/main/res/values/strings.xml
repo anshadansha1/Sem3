@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">p6_date_and_time</string>
+    <string name="tv1" />
+    <string name="tv2" />
+    <string name="tv3" />
+    <string name="tv4" />
+    <string name="tv5" />
+    <string name="tv6" />
+    <string name="tv7" />
+    <string name="tv8" />
+    <string name="tv9" />
+    <string name="tv10" />
 </resources>

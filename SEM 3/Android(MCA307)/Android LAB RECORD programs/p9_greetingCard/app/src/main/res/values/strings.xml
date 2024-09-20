@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">p9_greetingCard</string>
+    <string name="greeting_image">Greeting Card Image</string>
+</resources>

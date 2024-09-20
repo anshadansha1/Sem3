@@ -1,6 +1,7 @@
 package com.example.p16_suminnextactivity_intent;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,20 @@ public class ResultActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //To get Passe Values use Bundle
+        Bundle e = getIntent().getExtras();
+        if(e!=null){
+            TextView textView=findViewById(R.id.tv3);
+            //Getting passe values and Storing in values
+            String msg = e.getString("message");
+
+            int num1 = e.getInt("a");
+            int num2 = e.getInt("b");
+            int sum  = num1 + num2 ;
+            textView.setText(msg+sum);
+        }
     }
+
+
 }

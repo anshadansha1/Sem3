@@ -8,9 +8,32 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_width="191dp"
+        android:layout_height="88dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="System Intent AIRPLANE MODE CHANGED"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <TextView
+        android:id="@+id/tvAirplane"
+        android:layout_width="236dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="378dp"
+        android:text="Aiplane Mode Status"
+        android:textAlignment="center"
+        android:textColor="#1A1194"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
