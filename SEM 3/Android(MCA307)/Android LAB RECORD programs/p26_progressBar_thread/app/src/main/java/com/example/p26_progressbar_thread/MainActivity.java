@@ -1,4 +1,4 @@
-package com.example.p26_progressbar_threads;
+package com.example.p26_progressbar_thread;
 
 import android.os.Bundle;
 
